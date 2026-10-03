@@ -65,6 +65,10 @@ def _verify_one(req: JDRequirement, m: LLMMatch, norm_cv: str) -> MatchResult:
     if verdict == Verdict.DOES_NOT_MEET and req.type in (ReqType.TOOL, ReqType.SKILL) and not ok:
         verdict = Verdict.UNCLEAR                          # absent tool/skill = no evidence, not a proven miss
         reason = "No mention found in the CV, so it can't be confirmed either way."
+    if verdict == Verdict.MEETS and ok and req.type == ReqType.EDUCATION and not education_field_ok(req.text, snippet):
+        verdict = Verdict.UNCLEAR
+        reason = ("The degree in the CV doesn't clearly match the field this requirement asks for. "
+                  "Check this one manually.")
     if not ok:
         snippet = ""                                       # never show unverified "evidence"
     return MatchResult(requirement_id=req.id, verdict=verdict, evidence_snippet=snippet,
@@ -103,3 +107,30 @@ def finalize_results(requirements: List[JDRequirement], matches: List[LLMMatch],
                           + res.reason).strip()
         out.append(res)
     return out
+
+
+# ---------- Education field check ----------
+_EDU_GENERIC = {"bachelor", "bachelors", "bachelor s", "master", "masters", "master s", "phd", "doctorate",
+                "degree", "diploma", "related", "relevant", "similar", "field", "fields", "discipline",
+                "or", "and", "in", "of", "a", "an", "the", "any", "science", "sciences", "equivalent",
+                "experience", "engineering", "bs", "bsc", "ba", "ms", "msc", "mba", "required", "preferred",
+                "from", "accredited", "university", "technical", "subject", "such", "as", "to", "with", "s"}
+_EDU_GROUPS = [{"cs", "computer"}, {"it", "information", "technology"}, {"ee", "electrical"},
+               {"se", "software"}, {"ds", "data"}]
+
+
+def education_field_ok(req_text: str, snippet: str) -> bool:
+    """True if the degree quoted from the CV mentions a field named in the requirement.
+    If the requirement names no specific field, there is nothing to check."""
+    terms = {t for t in normalize(req_text).split() if t not in _EDU_GENERIC and len(t) > 1}
+    if not terms:
+        return True
+    have = set(normalize(snippet).split())
+    for t in terms:
+        alts = {t}
+        for g in _EDU_GROUPS:
+            if t in g:
+                alts |= g
+        if alts & have:
+            return True
+    return False

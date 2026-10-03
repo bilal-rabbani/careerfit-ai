@@ -302,6 +302,10 @@ def render_report(o):
     exp = o.total_experience
     m2.metric("Experience from CV dates", f"{fmt_years(exp.low, exp.high)} yrs" if exp.jobs_used else "n/a")
     m3.metric("Keywords you can add", len(rep.keywords.missing_supported))
+    if rep.must_have_total >= 3 and rep.must_have_met * 4 < rep.must_have_total:
+        st.warning("This job looks like a poor fit for this CV: fewer than a quarter of the checkable "
+                   "must-haves are met. If you pasted the wrong job or CV, go back and check. "
+                   "Keyword suggestions only appear for skills your CV already supports.")
     if rep.summary:
         st.info(esc(rep.summary))
     for w in o.warnings + st.session_state.edit_warnings:
