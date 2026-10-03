@@ -1,2 +1,4 @@
 streamlit
 pydantic>=2
+requests
+tenacity
