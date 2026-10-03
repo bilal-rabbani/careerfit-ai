@@ -4,3 +4,11 @@ __pycache__/
 *.pyc
 venv/
 .ipynb_checkpoints/
+
+# secrets
+.env
+.env.*
+*.pem
+*.key
+secrets.toml
+.streamlit/secrets.toml
