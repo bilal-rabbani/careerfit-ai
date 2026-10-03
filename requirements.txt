@@ -5,3 +5,4 @@ tenacity
 pdfplumber
 python-docx
 langgraph==1.2.11
+rapidfuzz
