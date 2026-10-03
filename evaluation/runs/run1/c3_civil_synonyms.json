@@ -1,0 +1,59 @@
+{
+ "case_id": "c3_civil_synonyms",
+ "requests": 0,
+ "elapsed": 0.1,
+ "parsed_jd": {
+  "job_title": "Planner",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Primavera P6",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Primavera P6"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "BSc Civil Engineering",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": []
+   }
+  ],
+  "keywords": [
+   "Primavera P6"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "meets",
+   "evidence_snippet": "Primavera P6",
+   "reason": "listed",
+   "verified": true
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "meets",
+   "evidence_snippet": "Primavera P6",
+   "reason": "listed",
+   "verified": true
+  }
+ ],
+ "keywords": {
+  "present": [
+   "Primavera P6"
+  ],
+  "missing_supported": [],
+  "missing_unsupported": []
+ },
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Planner\n\nYou meet 2 of 2 must-have requirements that can be checked from a CV.\n\n**Must-have requirements met: 2 of 2**\n\n## Requirement analysis\n\n- \ud83d\udfe2 **Primavera P6** (must-have): Meets requirement\n  - listed\n  - Evidence from your CV: \"Primavera P6\"\n- \ud83d\udfe2 **BSc Civil Engineering** (must-have): Meets requirement\n  - listed\n  - Evidence from your CV: \"Primavera P6\"\n\n## Keyword analysis\n\n**Already in your CV:** Primavera P6\n",
+ "warnings": [
+  "Some CV bullets may have been reworded by the parser. Please check them in the review step."
+ ]
+}

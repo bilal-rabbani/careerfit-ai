@@ -1,0 +1,53 @@
+{
+ "case_id": "c5_customer_success",
+ "requests": 0,
+ "elapsed": 0.1,
+ "parsed_jd": {
+  "job_title": "Planner",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Primavera P6",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": []
+   },
+   {
+    "id": "R2",
+    "text": "BSc Civil Engineering",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": []
+   }
+  ],
+  "keywords": []
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "Downgraded from 'meets': no matching evidence was found in the CV text. listed",
+   "verified": false
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "Downgraded from 'meets': no matching evidence was found in the CV text. listed",
+   "verified": false
+  }
+ ],
+ "keywords": {
+  "present": [],
+  "missing_supported": [],
+  "missing_unsupported": []
+ },
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Planner\n\nYou meet 0 of 2 must-have requirements that can be checked from a CV. 2 need clearer evidence.\n\n**Must-have requirements met: 0 of 2**\n\n## Requirement analysis\n\n- \ud83d\udfe1 **Primavera P6** (must-have): No clear evidence\n  - Downgraded from 'meets': no matching evidence was found in the CV text. listed\n- \ud83d\udfe1 **BSc Civil Engineering** (must-have): No clear evidence\n  - Downgraded from 'meets': no matching evidence was found in the CV text. listed\n\n## Keyword analysis\n\n**Already in your CV:** none\n",
+ "warnings": [
+  "Some CV bullets may have been reworded by the parser. Please check them in the review step."
+ ]
+}
