@@ -1,0 +1,155 @@
+{
+ "case_id": "c2_career_changer",
+ "requests": 6,
+ "elapsed": 24.2,
+ "parsed_jd": {
+  "job_title": "Data Analyst",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Bachelor's degree in Statistics, Mathematics, Economics or related field",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Bachelor's degree",
+     "Statistics",
+     "Mathematics",
+     "Economics"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "2+ years experience as data analyst",
+    "type": "experience",
+    "priority": "must_have",
+    "min_years": 2.0,
+    "keywords": [
+     "2+ years",
+     "data analyst"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Strong SQL skills",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "SQL"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "Experience with Tableau or Power BI",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Tableau",
+     "Power BI"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Proficiency in Python or R",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Python",
+     "R"
+    ]
+   },
+   {
+    "id": "R6",
+    "text": "Experience with A/B testing",
+    "type": "skill",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "keywords": [
+     "A/B testing"
+    ]
+   }
+  ],
+  "keywords": [
+   "Bachelor's degree",
+   "Statistics",
+   "Mathematics",
+   "Economics",
+   "2+ years",
+   "SQL",
+   "Tableau",
+   "Power BI",
+   "Python",
+   "R",
+   "A/B testing"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "BA English Literature, Northfield University, 2018",
+   "reason": "Degree is not in required field",
+   "verified": true
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "",
+   "reason": "No data analyst experience listed",
+   "verified": false
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "basic SQL",
+   "reason": "Only basic SQL skill mentioned, not strong",
+   "verified": true
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R6",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false
+  }
+ ],
+ "keywords": {
+  "present": [
+   "SQL"
+  ],
+  "missing_supported": [],
+  "missing_unsupported": [
+   "Bachelor's degree",
+   "Statistics",
+   "Mathematics",
+   "Economics",
+   "2+ years",
+   "Tableau",
+   "Power BI",
+   "Python",
+   "R",
+   "A/B testing",
+   "data analyst"
+  ]
+ },
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Data Analyst\n\nYou meet 0 of 5 must-have requirements that can be checked from a CV. 2 need clearer evidence and 3 are not met.\n\n**Must-have requirements met: 0 of 5**\n\n## Requirement analysis\n\n- \ud83d\udd34 **Bachelor's degree in Statistics, Mathematics, Economics or related field** (must-have): Does not meet\n  - Degree is not in required field\n  - Evidence from your CV: \"BA English Literature, Northfield University, 2018\"\n- \ud83d\udd34 **2+ years experience as data analyst** (must-have): Does not meet\n  - No data analyst experience listed\n- \ud83d\udd34 **Strong SQL skills** (must-have): Does not meet\n  - Only basic SQL skill mentioned, not strong\n  - Evidence from your CV: \"basic SQL\"\n- \ud83d\udfe1 **Experience with Tableau or Power BI** (must-have): No clear evidence\n  - No mention found in the CV, so it can't be confirmed either way.\n- \ud83d\udfe1 **Proficiency in Python or R** (must-have): No clear evidence\n  - No mention found in the CV, so it can't be confirmed either way.\n- \ud83d\udfe1 **Experience with A/B testing** (nice-to-have): No clear evidence\n  - No mention found in the CV, so it can't be confirmed either way.\n\n## Keyword analysis\n\n**Already in your CV:** SQL\n\n**Not supported by your CV. Add only if you truly have this experience:**\n- Bachelor's degree\n- Statistics\n- Mathematics\n- Economics\n- 2+ years\n- Tableau\n- Power BI\n- Python\n- R\n- A/B testing\n- data analyst\n",
+ "warnings": []
+}

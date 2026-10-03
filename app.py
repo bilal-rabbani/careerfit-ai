@@ -128,7 +128,16 @@ def sidebar_keys():
 
 
 # ---------- step 1: input ----------
+def load_sample():
+    from evaluation.cases import CASES
+    c = next(x for x in CASES if x["id"] == "c3_civil_synonyms")     # fictional CV and job
+    st.session_state["jd_paste"] = c["jd"]
+    st.session_state["cv_paste"] = c["cv"]
+
+
 def step_input():
+    st.button("Try with a sample (fictional) CV and job", key="btn_sample", on_click=load_sample,
+              help="Fills both boxes with made-up data. An uploaded file still takes priority over pasted text.")
     c1, c2 = st.columns(2)
     for col, kind, title in ((c1, "jd", "Job description"), (c2, "cv", "Your CV")):
         with col:
@@ -376,6 +385,20 @@ st.caption("Match Your Skills. Improve Your CV. Apply with Confidence.")
 st.caption("🔒 Your CV and job text are sent to the AI provider whose key is used. Some free tiers may use submitted text "
            "to improve their products, so check their terms and leave out ID numbers. This app never saves your files; "
            "results stay in memory for up to an hour to avoid repeat API calls.")
+
+with st.expander("How this works and its limits"):
+    st.markdown(
+        "- The AI reads the job description and your CV and splits them into requirements and facts.\n"
+        "- You **review and correct** what it found before anything is judged.\n"
+        "- Each requirement gets **Meets / No clear evidence / Does not meet / Can't be judged from a CV**.\n"
+        "- A **Meets** verdict needs a quote from your CV. Code checks that the quote really exists in your text. "
+        "That proves the quote is real, not that it fully satisfies the requirement, so read the evidence yourself.\n"
+        "- Years of experience are calculated by code from your job dates, not guessed by the AI.\n"
+        "- A keyword is only suggested when your CV already supports it. Anything else is listed as "
+        "*add only if you truly have this*.\n"
+        "- **Limits:** scanned PDFs can't be read (paste the text instead). Soft skills are never scored. "
+        "Requirements like *Salesforce or HubSpot* can be matched through either option. "
+        "Free AI models can make mistakes, so treat the result as a guide, not a verdict.")
 
 step = st.session_state.step
 idx = STEPS.index(step)

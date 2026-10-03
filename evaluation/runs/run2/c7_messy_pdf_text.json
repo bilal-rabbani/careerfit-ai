@@ -1,0 +1,177 @@
+{
+ "case_id": "c7_messy_pdf_text",
+ "requests": 7,
+ "elapsed": 27.3,
+ "parsed_jd": {
+  "job_title": "Marketing Executive",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Bachelor's degree in Marketing, Business or related field",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Bachelor's degree",
+     "Marketing",
+     "Business",
+     "related field"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "2+ years digital marketing experience",
+    "type": "experience",
+    "priority": "must_have",
+    "min_years": 2.0,
+    "keywords": [
+     "digital marketing",
+     "experience"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Hands-on SEO experience",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "SEO"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "Google Analytics reporting",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Google Analytics"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Content creation for blogs and social media",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "content creation",
+     "blogs",
+     "social media"
+    ]
+   },
+   {
+    "id": "R6",
+    "text": "Experience with paid advertising (Google Ads or Meta Ads)",
+    "type": "experience",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "keywords": [
+     "paid advertising",
+     "Google Ads",
+     "Meta Ads"
+    ]
+   }
+  ],
+  "keywords": [
+   "Bachelor's degree",
+   "Marketing",
+   "Business",
+   "digital marketing",
+   "SEO",
+   "Google Analytics",
+   "content creation",
+   "blogs",
+   "social media",
+   "paid advertising",
+   "Google Ads",
+   "Meta Ads"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "meets",
+   "evidence_snippet": "BBA (Marketing), Northfield University - 2021",
+   "reason": "Bachelor's degree in Marketing listed.",
+   "verified": true
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "meets",
+   "evidence_snippet": "MARKETING EXECUTIVE, GrowthHive Agency (2022-01 to 2024-08)",
+   "reason": "About 2.7 years across the relevant roles (required: 2+).",
+   "verified": true
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "meets",
+   "evidence_snippet": "Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months",
+   "reason": "Performed SEO campaigns as described.",
+   "verified": true
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "meets",
+   "evidence_snippet": "Reported on website performance using Google Analytics every month",
+   "reason": "Used Google Analytics for reporting.",
+   "verified": true
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "meets",
+   "evidence_snippet": "Wrote blog posts, newsletters and social media captions for 12 clients",
+   "reason": "Created blog posts and social media content.",
+   "verified": true
+  },
+  {
+   "requirement_id": "R6",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No paid advertising experience mentioned.",
+   "verified": false
+  }
+ ],
+ "keywords": {
+  "present": [
+   "Marketing",
+   "SEO",
+   "Google Analytics",
+   "social media"
+  ],
+  "missing_supported": [
+   "Bachelor's degree",
+   "Business",
+   "content creation",
+   "blogs",
+   "related field",
+   "experience"
+  ],
+  "missing_unsupported": [
+   "digital marketing",
+   "paid advertising",
+   "Google Ads",
+   "Meta Ads"
+  ]
+ },
+ "suggestions": [
+  {
+   "original": "Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months",
+   "suggested": "Demonstrated experience by planning and running campaigns that grew organic traffic by 60% over 8 months.",
+   "keywords_used": [
+    "experience"
+   ]
+  },
+  {
+   "original": "Wrote blog posts, newsletters and social media captions for 12 clients",
+   "suggested": "Demonstrated content creation and blogs by writing posts, newsletters and social media captions for 12 clients.",
+   "keywords_used": [
+    "content creation",
+    "blogs"
+   ]
+  }
+ ],
+ "markdown": "# CareerFit AI report: Marketing Executive\n\nYou meet 5 of 5 must-have requirements that can be checked from a CV. 6 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 5 of 5**\n\n## Requirement analysis\n\n- \ud83d\udfe2 **Bachelor's degree in Marketing, Business or related field** (must-have): Meets requirement\n  - Bachelor's degree in Marketing listed.\n  - Evidence from your CV: \"BBA (Marketing), Northfield University - 2021\"\n- \ud83d\udfe2 **2+ years digital marketing experience** (must-have): Meets requirement\n  - About 2.7 years across the relevant roles (required: 2+).\n  - Evidence from your CV: \"MARKETING EXECUTIVE, GrowthHive Agency (2022-01 to 2024-08)\"\n- \ud83d\udfe2 **Hands-on SEO experience** (must-have): Meets requirement\n  - Performed SEO campaigns as described.\n  - Evidence from your CV: \"Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months\"\n- \ud83d\udfe2 **Google Analytics reporting** (must-have): Meets requirement\n  - Used Google Analytics for reporting.\n  - Evidence from your CV: \"Reported on website performance using Google Analytics every month\"\n- \ud83d\udfe2 **Content creation for blogs and social media** (must-have): Meets requirement\n  - Created blog posts and social media content.\n  - Evidence from your CV: \"Wrote blog posts, newsletters and social media captions for 12 clients\"\n- \ud83d\udfe1 **Experience with paid advertising (Google Ads or Meta Ads)** (nice-to-have): No clear evidence\n  - No paid advertising experience mentioned.\n\n## Keyword analysis\n\n**Already in your CV:** Marketing, SEO, Google Analytics, social media\n\n**Your CV supports these, but uses different wording. Consider using the job's exact terms:**\n- Bachelor's degree (your CV says: \"BBA (Marketing), Northfield University - 2021\")\n- Business (your CV says: \"BBA (Marketing), Northfield University - 2021\")\n- content creation (your CV says: \"Wrote blog posts, newsletters and social media captions for 12 clients\")\n- blogs (your CV says: \"Wrote blog posts, newsletters and social media captions for 12 clients\")\n- related field (your CV says: \"BBA (Marketing), Northfield University - 2021\")\n- experience (your CV says: \"Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months\")\n\n**Not supported by your CV. Add only if you truly have this experience:**\n- digital marketing\n- paid advertising\n- Google Ads\n- Meta Ads\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months\n  **Suggested:** Demonstrated experience by planning and running campaigns that grew organic traffic by 60% over 8 months.\n  Keywords: experience\n\n- **Original:** Wrote blog posts, newsletters and social media captions for 12 clients\n  **Suggested:** Demonstrated content creation and blogs by writing posts, newsletters and social media captions for 12 clients.\n  Keywords: content creation, blogs\n",
+ "warnings": []
+}

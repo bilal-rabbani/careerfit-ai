@@ -1,0 +1,167 @@
+{
+ "case_id": "c5_customer_success",
+ "requests": 7,
+ "elapsed": 25.4,
+ "parsed_jd": {
+  "job_title": "Customer Success Manager",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Excellent communication skills",
+    "type": "soft_skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "communication"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "Strong stakeholder management",
+    "type": "soft_skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "stakeholder management"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Bachelor's degree in business or related field",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Bachelor's degree",
+     "business",
+     "related field"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "2+ years in customer-facing SaaS role",
+    "type": "experience",
+    "priority": "must_have",
+    "min_years": 2.0,
+    "keywords": [
+     "2+ years",
+     "customer-facing",
+     "SaaS"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Experience with CRM such as Salesforce or HubSpot",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "CRM",
+     "Salesforce",
+     "HubSpot"
+    ]
+   },
+   {
+    "id": "R6",
+    "text": "Spanish language skills",
+    "type": "skill",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "keywords": [
+     "Spanish",
+     "language"
+    ]
+   }
+  ],
+  "keywords": [
+   "communication",
+   "stakeholder management",
+   "Bachelor's degree",
+   "business",
+   "SaaS",
+   "CRM",
+   "Salesforce",
+   "HubSpot",
+   "Spanish",
+   "language",
+   "customer-facing",
+   "2+ years"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "cannot_assess",
+   "evidence_snippet": "",
+   "reason": "Soft skills can't be reliably judged from a CV.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "cannot_assess",
+   "evidence_snippet": "",
+   "reason": "Soft skills can't be reliably judged from a CV.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "meets",
+   "evidence_snippet": "BBA, Northfield University, 2021",
+   "reason": "Bachelor's degree in business shown",
+   "verified": true
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "meets",
+   "evidence_snippet": "Customer Success Associate, CloudDesk (2021-09 to 2024-02)",
+   "reason": "About 2.5 years across the relevant roles (required: 2+).",
+   "verified": true
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "meets",
+   "evidence_snippet": "Tracked renewals and account health in HubSpot",
+   "reason": "Experience with HubSpot CRM",
+   "verified": true
+  },
+  {
+   "requirement_id": "R6",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false
+  }
+ ],
+ "keywords": {
+  "present": [
+   "stakeholder management",
+   "business",
+   "SaaS",
+   "HubSpot"
+  ],
+  "missing_supported": [
+   "Bachelor's degree",
+   "CRM",
+   "Salesforce",
+   "related field"
+  ],
+  "missing_unsupported": [
+   "communication",
+   "Spanish",
+   "language",
+   "customer-facing",
+   "2+ years"
+  ]
+ },
+ "suggestions": [
+  {
+   "original": "Tracked renewals and account health in HubSpot",
+   "suggested": "Utilized CRM to track renewals and account health.",
+   "keywords_used": [
+    "CRM"
+   ]
+  }
+ ],
+ "markdown": "# CareerFit AI report: Customer Success Manager\n\nYou meet 3 of 3 must-have requirements that can be checked from a CV. 4 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 3 of 3**\n(2 requirement(s) can't be judged from a CV and are not counted.)\n\n## Requirement analysis\n\n- \u26aa **Excellent communication skills** (must-have): Can't be judged from a CV\n  - Soft skills can't be reliably judged from a CV.\n- \u26aa **Strong stakeholder management** (must-have): Can't be judged from a CV\n  - Soft skills can't be reliably judged from a CV.\n- \ud83d\udfe2 **Bachelor's degree in business or related field** (must-have): Meets requirement\n  - Bachelor's degree in business shown\n  - Evidence from your CV: \"BBA, Northfield University, 2021\"\n- \ud83d\udfe2 **2+ years in customer-facing SaaS role** (must-have): Meets requirement\n  - About 2.5 years across the relevant roles (required: 2+).\n  - Evidence from your CV: \"Customer Success Associate, CloudDesk (2021-09 to 2024-02)\"\n- \ud83d\udfe2 **Experience with CRM such as Salesforce or HubSpot** (must-have): Meets requirement\n  - Experience with HubSpot CRM\n  - Evidence from your CV: \"Tracked renewals and account health in HubSpot\"\n- \ud83d\udfe1 **Spanish language skills** (nice-to-have): No clear evidence\n  - No mention found in the CV, so it can't be confirmed either way.\n\n## Keyword analysis\n\n**Already in your CV:** stakeholder management, business, SaaS, HubSpot\n\n**Your CV supports these, but uses different wording. Consider using the job's exact terms:**\n- Bachelor's degree (your CV says: \"BBA, Northfield University, 2021\")\n- CRM (your CV says: \"Tracked renewals and account health in HubSpot\")\n- Salesforce (your CV says: \"Tracked renewals and account health in HubSpot\")\n- related field (your CV says: \"BBA, Northfield University, 2021\")\n\n**Not supported by your CV. Add only if you truly have this experience:**\n- communication\n- Spanish\n- language\n- customer-facing\n- 2+ years\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Tracked renewals and account health in HubSpot\n  **Suggested:** Utilized CRM to track renewals and account health.\n  Keywords: CRM\n",
+ "warnings": []
+}
