@@ -62,6 +62,9 @@ def _verify_one(req: JDRequirement, m: LLMMatch, norm_cv: str) -> MatchResult:
     if verdict == Verdict.MEETS and not ok:
         verdict = Verdict.UNCLEAR
         reason = ("Downgraded from 'meets': no matching evidence was found in the CV text. " + reason).strip()
+    if verdict == Verdict.DOES_NOT_MEET and req.type in (ReqType.TOOL, ReqType.SKILL) and not ok:
+        verdict = Verdict.UNCLEAR                          # absent tool/skill = no evidence, not a proven miss
+        reason = "No mention found in the CV, so it can't be confirmed either way."
     if not ok:
         snippet = ""                                       # never show unverified "evidence"
     return MatchResult(requirement_id=req.id, verdict=verdict, evidence_snippet=snippet,
