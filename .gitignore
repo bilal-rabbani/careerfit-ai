@@ -12,3 +12,9 @@ venv/
 *.key
 secrets.toml
 .streamlit/secrets.toml
+
+# personal documents
+*.docx
+*.doc
+*.pdf
+uploads/

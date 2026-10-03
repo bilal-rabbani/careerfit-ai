@@ -2,3 +2,5 @@ streamlit
 pydantic>=2
 requests
 tenacity
+pdfplumber
+python-docx
