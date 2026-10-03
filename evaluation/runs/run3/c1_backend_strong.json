@@ -1,0 +1,165 @@
+{
+ "case_id": "c1_backend_strong",
+ "requests": 7,
+ "elapsed": 7.1,
+ "parsed_jd": {
+  "job_title": "Backend Engineer",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Bachelor's degree in Computer Science or related field",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Bachelor's degree",
+     "Computer Science",
+     "related field"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "3+ years professional Python experience",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": 3.0,
+    "keywords": [
+     "Python"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Build REST APIs using FastAPI or Flask",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "REST APIs",
+     "FastAPI",
+     "Flask"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "Solid knowledge of PostgreSQL",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "PostgreSQL"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Docker experience",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Docker"
+    ]
+   },
+   {
+    "id": "R6",
+    "text": "Experience with AWS",
+    "type": "experience",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "keywords": [
+     "AWS"
+    ]
+   },
+   {
+    "id": "R7",
+    "text": "Experience with CI/CD pipelines",
+    "type": "experience",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "keywords": [
+     "CI/CD pipelines"
+    ]
+   }
+  ],
+  "keywords": [
+   "Backend Engineer",
+   "payments",
+   "Bachelor's degree",
+   "Computer Science",
+   "Python",
+   "REST APIs",
+   "FastAPI",
+   "Flask",
+   "PostgreSQL",
+   "Docker",
+   "AWS",
+   "CI/CD pipelines"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "meets",
+   "evidence_snippet": "BSc Computer Science, Northfield University, 2017",
+   "reason": "Bachelor's degree in Computer Science matches requirement",
+   "verified": true
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "meets",
+   "evidence_snippet": "Software Engineer, Nova Labs (2019-03 to 2023-06); Junior Developer, Pixel Works (2018-01 to 2019-02)",
+   "reason": "About 5.5 years across the relevant roles (required: 3+).",
+   "verified": true
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "meets",
+   "evidence_snippet": "Built REST APIs with FastAPI that handled payment and invoicing workflows",
+   "reason": "Demonstrates building REST APIs using FastAPI",
+   "verified": true
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "meets",
+   "evidence_snippet": "Designed PostgreSQL schemas and optimised slow queries",
+   "reason": "Shows solid knowledge of PostgreSQL",
+   "verified": true
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "meets",
+   "evidence_snippet": "Containerised services with Docker and Docker Compose",
+   "reason": "Docker used in Nova Labs role",
+   "verified": true
+  },
+  {
+   "requirement_id": "R6",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "",
+   "reason": "AWS not mentioned",
+   "verified": false
+  },
+  {
+   "requirement_id": "R7",
+   "verdict": "meets",
+   "evidence_snippet": "Set up GitHub Actions pipelines for automated testing and deployment",
+   "reason": "CI/CD pipelines set up in Nova Labs role",
+   "verified": true
+  }
+ ],
+ "keywords": {
+  "present": [
+   "Python",
+   "REST APIs",
+   "FastAPI",
+   "PostgreSQL",
+   "Docker"
+  ],
+  "missing_supported": [
+   "Flask"
+  ],
+  "missing_unsupported": []
+ },
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Backend Engineer\n\nYou meet 5 of 5 must-have requirements that can be checked from a CV. 1 relevant keyword your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 5 of 5**\n\n## Requirement analysis\n\n- \ud83d\udfe2 **Bachelor's degree in Computer Science or related field** (must-have): Meets requirement\n  - Bachelor's degree in Computer Science matches requirement\n  - Evidence from your CV: \"BSc Computer Science, Northfield University, 2017\"\n- \ud83d\udfe2 **3+ years professional Python experience** (must-have): Meets requirement\n  - About 5.5 years across the relevant roles (required: 3+).\n  - Evidence from your CV: \"Software Engineer, Nova Labs (2019-03 to 2023-06); Junior Developer, Pixel Works (2018-01 to 2019-02)\"\n- \ud83d\udfe2 **Build REST APIs using FastAPI or Flask** (must-have): Meets requirement\n  - Demonstrates building REST APIs using FastAPI\n  - Evidence from your CV: \"Built REST APIs with FastAPI that handled payment and invoicing workflows\"\n- \ud83d\udfe2 **Solid knowledge of PostgreSQL** (must-have): Meets requirement\n  - Shows solid knowledge of PostgreSQL\n  - Evidence from your CV: \"Designed PostgreSQL schemas and optimised slow queries\"\n- \ud83d\udfe2 **Docker experience** (must-have): Meets requirement\n  - Docker used in Nova Labs role\n  - Evidence from your CV: \"Containerised services with Docker and Docker Compose\"\n- \ud83d\udd34 **Experience with AWS** (nice-to-have): Does not meet\n  - AWS not mentioned\n- \ud83d\udfe2 **Experience with CI/CD pipelines** (nice-to-have): Meets requirement\n  - CI/CD pipelines set up in Nova Labs role\n  - Evidence from your CV: \"Set up GitHub Actions pipelines for automated testing and deployment\"\n\n## Keyword analysis\n\n**Already in your CV:** Python, REST APIs, FastAPI, PostgreSQL, Docker\n\n**Your CV supports these, but uses different wording. Consider using the job's exact terms:**\n- Flask (your CV says: \"Built REST APIs with FastAPI that handled payment and invoicing workflows\")\n",
+ "warnings": []
+}

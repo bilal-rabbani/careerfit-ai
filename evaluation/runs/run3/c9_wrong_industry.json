@@ -1,0 +1,128 @@
+{
+ "case_id": "c9_wrong_industry",
+ "requests": 6,
+ "elapsed": 23.8,
+ "parsed_jd": {
+  "job_title": "Software Engineer",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Bachelor's degree in CS, IT, or related field",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Bachelor's degree",
+     "CS",
+     "IT",
+     "related field"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "4+ years professional software development experience",
+    "type": "experience",
+    "priority": "must_have",
+    "min_years": 4.0,
+    "keywords": [
+     "software development",
+     "experience",
+     "professional"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Proficiency in C++",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "C++"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "Proficiency in Rust",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Rust"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Experience with distributed systems",
+    "type": "skill",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "keywords": [
+     "distributed systems"
+    ]
+   }
+  ],
+  "keywords": [
+   "Software Engineer",
+   "Bachelor's degree",
+   "CS",
+   "IT",
+   "related field",
+   "4+ years",
+   "professional",
+   "software development",
+   "experience",
+   "C++",
+   "Rust",
+   "distributed systems"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "Bachelor of Science, Civil Engineering, Northfield University, 2023",
+   "reason": "Degree is civil engineering, not CS/IT or related field",
+   "verified": true
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "",
+   "reason": "No software development experience listed",
+   "verified": false
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false
+  }
+ ],
+ "keywords": {
+  "present": [],
+  "missing_supported": [],
+  "missing_unsupported": [
+   "C++",
+   "Rust",
+   "distributed systems"
+  ]
+ },
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Software Engineer\n\nYou meet 0 of 4 must-have requirements that can be checked from a CV. 2 need clearer evidence and 2 are not met.\n\n**Must-have requirements met: 0 of 4**\n\n## Requirement analysis\n\n- \ud83d\udd34 **Bachelor's degree in CS, IT, or related field** (must-have): Does not meet\n  - Degree is civil engineering, not CS/IT or related field\n  - Evidence from your CV: \"Bachelor of Science, Civil Engineering, Northfield University, 2023\"\n- \ud83d\udd34 **4+ years professional software development experience** (must-have): Does not meet\n  - No software development experience listed\n- \ud83d\udfe1 **Proficiency in C++** (must-have): No clear evidence\n  - No mention found in the CV, so it can't be confirmed either way.\n- \ud83d\udfe1 **Proficiency in Rust** (must-have): No clear evidence\n  - No mention found in the CV, so it can't be confirmed either way.\n- \ud83d\udfe1 **Experience with distributed systems** (nice-to-have): No clear evidence\n  - No mention found in the CV, so it can't be confirmed either way.\n\n## Keyword analysis\n\n**Already in your CV:** none\n\n**Not supported by your CV. Add only if you truly have this experience:**\n- C++\n- Rust\n- distributed systems\n",
+ "warnings": []
+}

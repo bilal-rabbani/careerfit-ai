@@ -1,0 +1,144 @@
+{
+ "case_id": "c4_ambiguous_years",
+ "requests": 4,
+ "elapsed": 5.5,
+ "parsed_jd": {
+  "job_title": "Frontend Developer",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "React experience",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": 4.0,
+    "keywords": [
+     "React"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "Proficiency in TypeScript",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "TypeScript"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Integrating REST APIs",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "REST",
+     "APIs"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "Git",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "Git"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Code review practices",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "keywords": [
+     "code review"
+    ]
+   },
+   {
+    "id": "R6",
+    "text": "Next.js",
+    "type": "tool",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "keywords": [
+     "Next.js"
+    ]
+   }
+  ],
+  "keywords": [
+   "React",
+   "TypeScript",
+   "REST",
+   "APIs",
+   "Git",
+   "code review",
+   "Next.js",
+   "Frontend",
+   "Developer",
+   "experience"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "unclear",
+   "evidence_snippet": "Frontend Developer, Brightside Studio (2021 to 2023); Freelance Web Developer, company (2022 to 2024)",
+   "reason": "About 2.2\u20134.0 years found; 4+ required. Some dates are missing or only given as years, so this can't be confirmed.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "meets",
+   "evidence_snippet": "Built dashboards in React and TypeScript",
+   "reason": "CV shows use of TypeScript, indicating proficiency.",
+   "verified": true
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "meets",
+   "evidence_snippet": "Integrated REST APIs for reporting screens",
+   "reason": "CV explicitly mentions integrating REST APIs.",
+   "verified": true
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "meets",
+   "evidence_snippet": "Git",
+   "reason": "Git listed in skills section.",
+   "verified": true
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention of code review practices.",
+   "verified": false
+  },
+  {
+   "requirement_id": "R6",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "Next.js not referenced in CV.",
+   "verified": false
+  }
+ ],
+ "keywords": {
+  "present": [
+   "React",
+   "TypeScript",
+   "REST",
+   "APIs",
+   "Git"
+  ],
+  "missing_supported": [],
+  "missing_unsupported": [
+   "code review",
+   "Next.js"
+  ]
+ },
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Frontend Developer\n\nYou meet 3 of 5 must-have requirements that can be checked from a CV. 2 need clearer evidence.\n\n**Must-have requirements met: 3 of 5**\n\n## Requirement analysis\n\n- \ud83d\udfe1 **React experience** (must-have): No clear evidence\n  - About 2.2\u20134.0 years found; 4+ required. Some dates are missing or only given as years, so this can't be confirmed.\n  - Evidence from your CV: \"Frontend Developer, Brightside Studio (2021 to 2023); Freelance Web Developer, company (2022 to 2024)\"\n- \ud83d\udfe2 **Proficiency in TypeScript** (must-have): Meets requirement\n  - CV shows use of TypeScript, indicating proficiency.\n  - Evidence from your CV: \"Built dashboards in React and TypeScript\"\n- \ud83d\udfe2 **Integrating REST APIs** (must-have): Meets requirement\n  - CV explicitly mentions integrating REST APIs.\n  - Evidence from your CV: \"Integrated REST APIs for reporting screens\"\n- \ud83d\udfe2 **Git** (must-have): Meets requirement\n  - Git listed in skills section.\n  - Evidence from your CV: \"Git\"\n- \ud83d\udfe1 **Code review practices** (must-have): No clear evidence\n  - No mention of code review practices.\n- \ud83d\udfe1 **Next.js** (nice-to-have): No clear evidence\n  - Next.js not referenced in CV.\n\n## Keyword analysis\n\n**Already in your CV:** React, TypeScript, REST, APIs, Git\n\n**Not supported by your CV. Add only if you truly have this experience:**\n- code review\n- Next.js\n",
+ "warnings": []
+}

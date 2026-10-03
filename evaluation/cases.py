@@ -268,4 +268,30 @@ Python, PyTorch, scikit-learn, pandas, AWS""",
      G("Experience with Apache Spark", N, ["unclear", "does_not_meet"]),
  ],
  "trap_keywords": ["Spark"]},
+
+# ---------------------------------------------------------------- 9
+{"id": "c9_wrong_industry", "title": "Civil CV against a software job",
+ "jd": """Software Engineer
+Requirements:
+- Bachelor's degree in CS, IT, or a related field (required)
+- 4+ years of professional software development experience (required)
+- Proficiency in C++ or Rust (required)
+- Experience with distributed systems is a plus""",
+ "cv": """Bilal Ahmed
+Civil Engineer
+Experience
+Assistant Planning Engineer, Indus Builders (2023-01 to 2025-06)
+- Prepared construction schedules in Primavera P6
+- Tracked quantities and progress reports for a highway project
+Education
+Bachelor of Science, Civil Engineering, Northfield University, 2023
+Skills
+Primavera P6, AutoCAD, Excel""",
+ "gold": [
+     G("Bachelor's degree in CS, IT, or a related field", M, ["does_not_meet", "unclear"]),
+     G("4+ years of professional software development experience", M, ["does_not_meet", "unclear"], 4),
+     G("Proficiency in C++ or Rust", M, ["unclear", "does_not_meet"]),
+     G("Experience with distributed systems", N, ["unclear", "does_not_meet"]),
+ ],
+ "trap_keywords": ["C++", "Rust", "CS"]},
 ]
