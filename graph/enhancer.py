@@ -79,7 +79,7 @@ def validate_suggestions(raw: LLMEnhancerOutput, bullets: List[Tuple[str, str]],
         if not kws:
             continue
         done.add(n)
-        out.append(BulletSuggestion(original=original, suggested=sug, keywords_used=kws))
+        out.append(BulletSuggestion(original=original, suggested=sug, keywords_used=kws, job=bullets[n - 1][0]))
         if len(out) >= MAX_SUGGESTIONS:
             break
     return out

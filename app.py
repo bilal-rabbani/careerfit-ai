@@ -5,7 +5,7 @@ import streamlit as st
 from graph import graph_a, graph_b
 from graph.graph_a import ParseFailed
 from graph.graph_b import AnalyzeFailed
-from graph.report import ICON, LABEL
+from graph.report import GROUP_NOTE, GROUP_TITLE, LEGEND, group_rows, row_parts
 from graph.schemas import JobEntry, Priority
 from llm.config import DEFAULT_MODELS
 from llm.router import KeyConfig, LLMError, QuotaExhausted, test_keys
@@ -56,7 +56,7 @@ def friendly_error(e: Exception) -> str:
 def run_stage(label: str, fn):
     """Runs fn() inside a progress box. Returns (result, error_message)."""
     with st.status(label, expanded=True) as status:
-        st.write("Free-tier AI can be slow, and rate-limit waits can add up to about 20 seconds.")
+        st.write("Free-tier AI can be slow, and rate-limit waits can add up to about a minute.")
         try:
             result = fn()
         except Exception as e:
@@ -239,6 +239,7 @@ def step_review(keys, mode, use_summary):
                 "type": st.column_config.SelectboxColumn("Type", options=rv.TYPES),
                 "priority": st.column_config.SelectboxColumn("Priority", options=rv.PRIOS),
                 "min_years": st.column_config.NumberColumn("Min years", min_value=0, max_value=40, step=0.5),
+                "level": st.column_config.SelectboxColumn("Level asked", options=rv.LEVEL_OPTIONS),
                 "keywords": st.column_config.TextColumn("Keywords (comma separated)")})
         st.caption("Soft skills (communication, teamwork) can't be judged from a CV and are never counted. "
                    "If a real skill was typed as soft_skill, change its type.")
@@ -304,14 +305,30 @@ def step_review(keys, mode, use_summary):
 
 
 # ---------- step 4: report ----------
+def _show_row(r):
+    p = row_parts(r)
+    head = f"{p['icon']} **{esc(p['title'])}** ({p['tag']}) · {p['strength']}"
+    if p["level"]:
+        head += " · " + esc(p["level"])
+    st.markdown(head)
+    if p["reason"]:
+        st.caption(esc(p["reason"]))
+    if p["quote"]:
+        st.markdown("> " + esc(p["quote"]))
+    if p["where"]:
+        st.caption("Add it to: " + esc(p["where"]))
+
+
 def render_report(o):
     rep = o.report
+    groups = group_rows(rep)
     st.header("Results" + (f": {esc(rep.job_title)}" if rep.job_title else ""))
-    m1, m2, m3 = st.columns(3)
+    m1, m2, m3, m4 = st.columns(4)
     m1.metric("Must-haves met", f"{rep.must_have_met} of {rep.must_have_total}")
     exp = o.total_experience
     m2.metric("Experience from CV dates", f"{fmt_years(exp.low, exp.high)} yrs" if exp.jobs_used else "n/a")
-    m3.metric("Keywords you can add", len(rep.keywords.missing_supported))
+    m3.metric("Can't fix by rewording", len(groups["gap"]))
+    m4.metric("Fix by editing", len(groups["fix"]))
     if rep.must_have_total >= 3 and rep.must_have_met * 4 < rep.must_have_total:
         st.warning("This job looks like a poor fit for this CV: fewer than a quarter of the checkable "
                    "must-haves are met. If you pasted the wrong job or CV, go back and check. "
@@ -322,42 +339,52 @@ def render_report(o):
         st.warning(esc(w))
 
     st.subheader("Requirement analysis")
-    for r in rep.rows:
-        tag = "must-have" if r.priority == Priority.MUST_HAVE else "nice-to-have"
-        with st.container(border=True):
-            st.markdown(f"{ICON[r.verdict]} **{esc(r.requirement)}**")
-            st.caption(f"{tag} · {LABEL[r.verdict]}")
-            if r.reason:
-                st.markdown(esc(r.reason))
-            if r.evidence:
-                st.markdown(f"> {esc(r.evidence)}")
-                if r.verified:
-                    st.caption("✔ Verified against your CV")
+    st.caption(LEGEND)
+    for key in ("gap", "train", "fix"):
+        if groups[key]:
+            st.markdown(f"**{GROUP_TITLE[key]}** ({len(groups[key])})")
+            st.caption(GROUP_NOTE[key])
+            for r in groups[key]:
+                _show_row(r)
+    if groups["met"]:
+        with st.expander(f"Met ({len(groups['met'])})"):
+            for r in groups["met"]:
+                _show_row(r)
+    if groups["na"]:
+        with st.expander(f"Can't be judged from a CV ({len(groups['na'])})"):
+            st.markdown("; ".join(esc(r.requirement) for r in groups["na"]))
 
     kw = rep.keywords
     st.subheader("Keyword analysis")
     st.markdown("**Already in your CV:** " + (", ".join(esc(k) for k in kw.present) or "none"))
-    if kw.missing_supported:
-        st.markdown("**Your CV supports these but uses different wording. Consider the job's exact terms:**")
-        for k in kw.missing_supported:
-            ev = o.kw_evidence.get(k)
-            st.markdown(f"- {esc(k)}" + (f" — your CV says: “{esc(ev)[:140]}”" if ev else ""))
+    shown = False
+    for g in kw.groups:
+        if g.supported:
+            if not shown:
+                st.markdown("**Your CV supports these but words them differently. Consider the job's wording:**")
+                shown = True
+            ev = next((o.kw_evidence.get(t) for t in g.supported if o.kw_evidence.get(t)), "")
+            line = "- " + ", ".join(esc(t) for t in g.supported) + " (for: " + esc(g.requirement[:80]) + ")"
+            if ev:
+                line += " — your CV says: “" + esc(ev[:140]) + "”"
+            st.markdown(line)
+    if not shown and kw.missing_supported:
+        st.markdown("**Your CV supports these but words them differently:** " + ", ".join(esc(k) for k in kw.missing_supported))
     if kw.missing_unsupported:
-        st.markdown("**Not supported by your CV. Add only if you truly have this experience:**")
-        for k in kw.missing_unsupported:
-            st.markdown(f"- {esc(k)}")
+        st.markdown("**Not supported by your CV. Add only if you truly have this experience:** "
+                    + ", ".join(esc(k) for k in kw.missing_unsupported))
 
     if rep.suggestions:
         st.subheader("Suggested CV wording")
         st.caption("Suggestions only. Check that every word is true before you use it.")
-        for s in rep.suggestions:
+        for sg in rep.suggestions:
             with st.container(border=True):
                 a, b = st.columns(2)
-                a.caption("Original")
-                a.markdown(esc(s.original))
+                a.caption("Original" + (f" ({esc(sg.job)})" if sg.job else ""))
+                a.markdown(esc(sg.original))
                 b.caption("Suggested (use the copy button)")
-                b.code(s.suggested, language=None)
-                st.caption("Keywords: " + ", ".join(s.keywords_used))
+                b.code(sg.suggested, language=None)
+                st.caption("Keywords: " + ", ".join(sg.keywords_used))
 
     st.subheader("Download")
     d1, d2, _ = st.columns([1, 1, 3])
@@ -365,19 +392,36 @@ def render_report(o):
     d2.download_button("HTML (print to PDF)", report_to_html(rep, o.kw_evidence, o.warnings),
                        "careerfit_report.html", "text/html", key="dl_html")
 
-
-def step_report():
+def step_report(keys, mode, use_summary):
     if "outcome" not in st.session_state:
         reset_data()
         return go("input")
-    render_report(st.session_state.outcome)
+    o = st.session_state.outcome
+    render_report(o)
+    if any("suggestions couldn't" in w.lower() for w in o.warnings):
+        if st.button("Retry bullet suggestions", key="btn_retry_sugg",
+                     help="Matching is saved, so only the suggestions step runs again."):
+            if not keys:
+                st.error("Add an API key in the sidebar first.")
+            else:
+                msg = spend_demo_step(mode)
+                if msg:
+                    st.error(msg)
+                else:
+                    out, err = run_stage("Retrying suggestions...", lambda: graph_b.analyze(
+                        st.session_state.parsed_jd, st.session_state.parsed_cv, st.session_state.cv_text,
+                        keys, use_llm_summary=use_summary))
+                    if err:
+                        st.error(err)
+                    else:
+                        st.session_state.outcome = out
+                        st.rerun()
     b1, b2, _ = st.columns([1, 1, 5])
     if b1.button("Edit and re-run", key="btn_edit"):
         go("review")
     if b2.button("Start over", key="btn_restart"):
         reset_data()
         go("input")
-
 
 # ---------- page ----------
 user_keys = sidebar_keys()
@@ -425,4 +469,4 @@ elif step == "preview":
 elif step == "review":
     step_review(keys, mode, use_summary)
 else:
-    step_report()
+    step_report(keys, mode, use_summary)

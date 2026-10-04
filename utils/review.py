@@ -11,8 +11,9 @@ from utils.textnorm import normalize
 
 TYPES = [t.value for t in ReqType]
 PRIOS = [p.value for p in Priority]
+LEVEL_OPTIONS = ["none", "basic", "intermediate", "advanced", "professional"]
 MAX_JOBS, MAX_BULLETS = 12, 12
-REQ_COLS = ["id", "text", "type", "priority", "min_years", "keywords"]
+REQ_COLS = ["id", "text", "type", "priority", "min_years", "level", "keywords"]
 EDU_COLS = ["degree", "field", "institution", "year"]
 
 _BULLET = re.compile(r"^\s*(?:[-*•●▪◦]|\d+[.)])\s+")
@@ -59,7 +60,7 @@ def lines_to_list(text: str, limit: int, split_commas: bool = False) -> List[str
 # ---------- Job description <-> table ----------
 def jd_to_frame(jd: ParsedJD) -> pd.DataFrame:
     rows = [{"id": r.id, "text": r.text, "type": r.type.value, "priority": r.priority.value,
-             "min_years": r.min_years, "keywords": ", ".join(r.keywords)} for r in jd.requirements]
+             "min_years": r.min_years, "level": r.required_level or "none", "keywords": ", ".join(r.keywords)} for r in jd.requirements]
     df = pd.DataFrame(rows, columns=REQ_COLS)
     df["min_years"] = pd.to_numeric(df["min_years"], errors="coerce")
     return df
@@ -90,6 +91,7 @@ def frame_to_jd(df: pd.DataFrame, base: ParsedJD, job_title: str = "") -> Tuple[
             type=typ if typ in TYPES else "other",
             priority=pri if pri in PRIOS else "must_have",
             min_years=yrs if yrs and 0 < yrs <= 40 else None,
+            required_level=_s(row.get("level")).lower() if typ in ("skill", "tool") else "",
             keywords=kws[:5]))
     if dupes:
         warnings.append(f"{dupes} duplicate requirement(s) were removed.")

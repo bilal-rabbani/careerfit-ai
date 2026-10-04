@@ -12,3 +12,8 @@ DEFAULT_MODELS = {
 
 REQUEST_TIMEOUT = 60        # seconds per HTTP call
 MAX_RATE_LIMIT_WAIT = 20    # max seconds to wait if every key is rate limited
+
+MAX_TOTAL_WAIT = 75        # seconds one call may spend waiting out rate limits
+DEFAULT_COOLDOWN = 15      # used when the provider gives no retry hint
+MAX_COOLDOWN = 45          # longest single wait
+MAX_RATE_LIMIT_TRIES = 3   # rate-limited attempts per key before giving up on it

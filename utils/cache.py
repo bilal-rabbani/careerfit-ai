@@ -4,7 +4,7 @@ import time
 from collections import OrderedDict
 from typing import Optional
 
-PROMPT_VERSION = "v1"      # bump when you change a parser prompt or schema
+PROMPT_VERSION = "v2"      # bump when you change a parser prompt or schema
 
 
 class ParseCache:

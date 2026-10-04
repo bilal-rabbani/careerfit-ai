@@ -1,4 +1,6 @@
 import json
+import re
+import threading
 import time
 from dataclasses import dataclass, field
 from typing import List, Type, TypeVar
@@ -7,7 +9,8 @@ import requests
 from pydantic import BaseModel, ValidationError
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
-from llm.config import NODE_SLOTS, DEFAULT_MODELS, REQUEST_TIMEOUT, MAX_RATE_LIMIT_WAIT
+from llm.config import (NODE_SLOTS, DEFAULT_MODELS, REQUEST_TIMEOUT, MAX_TOTAL_WAIT,
+                        DEFAULT_COOLDOWN, MAX_COOLDOWN, MAX_RATE_LIMIT_TRIES)
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -62,16 +65,28 @@ def _error_message(r, cfg: KeyConfig) -> str:
     return f"HTTP {r.status_code}: {msg[:200]}"
 
 
+def _parse_retry(r):
+    """Seconds the provider asks us to wait (header or error text). None if unknown."""
+    try:
+        return float(r.headers.get("retry-after"))
+    except (TypeError, ValueError):
+        pass
+    txt = r.text or ""
+    m = re.search(r'retryDelay"?\s*:\s*"?(\d+(?:\.\d+)?)s', txt)
+    if m:
+        return float(m.group(1))
+    m = re.search(r"try again in (?:(\d+)m)?\s*(\d+(?:\.\d+)?)s", txt)
+    if m:
+        return int(m.group(1) or 0) * 60 + float(m.group(2))
+    return None
+
+
 def _raise_for_status(r, cfg: KeyConfig):
     if r.status_code < 400:
         return
     msg = _error_message(r, cfg)
     if r.status_code == 429:
-        try:
-            ra = float(r.headers.get("retry-after"))
-        except (TypeError, ValueError):
-            ra = None
-        raise RateLimitError(msg, ra)
+        raise RateLimitError(msg, _parse_retry(r))
     if r.status_code in (401, 403) or (r.status_code == 400 and "api key" in msg.lower()):
         raise AuthError(msg)
     if r.status_code >= 500:
@@ -171,32 +186,44 @@ def keys_for_node(node: str, keys: List[KeyConfig]) -> List[KeyConfig]:
     return list(dict.fromkeys(ordered))
 
 
+_STATE_LOCK = threading.Lock()
+_KEY_LOCKS = {}
+_COOLDOWN = {}      # key config -> time.time() when it may be used again
+
+
+def _key_lock(cfg):
+    with _STATE_LOCK:
+        return _KEY_LOCKS.setdefault(cfg, threading.Lock())
+
+
 def call_llm(node: str, keys: List[KeyConfig], system: str, user: str, schema: Type[T]) -> T:
+    """Calls on the same key run one at a time. A rate-limited key cools down for every caller."""
     if not keys:
         raise QuotaExhausted("No API keys provided.")
-    candidates = keys_for_node(node, keys)
-    problems = {}
-
-    for round_no in range(2):
-        rate_limited = []
-        for cfg in candidates:
-            if cfg in problems and not isinstance(problems[cfg], RateLimitError):
-                continue                              # auth/model errors won't fix themselves
-            try:
+    alive = keys_for_node(node, keys)
+    problems, tries = {}, {}
+    start = time.time()
+    while alive and time.time() - start < MAX_TOTAL_WAIT:
+        alive.sort(key=lambda c: _COOLDOWN.get(c, 0.0))         # stable: slot preference kept when none are cooling
+        cfg = alive[0]
+        try:
+            with _key_lock(cfg):
+                wait = _COOLDOWN.get(cfg, 0.0) - time.time()
+                if wait > 0:
+                    time.sleep(min(wait, MAX_COOLDOWN))
                 return _structured(cfg, system, user, schema)
-            except RateLimitError as e:
-                problems[cfg] = e
-                rate_limited.append(e)
-            except (AuthError, BadRequestError, BadOutputError, ProviderError) as e:
-                problems[cfg] = e
-        if round_no == 0 and rate_limited:
-            waits = [MAX_RATE_LIMIT_WAIT if e.retry_after is None else e.retry_after
-                     for e in rate_limited]
-            time.sleep(min(max(waits), MAX_RATE_LIMIT_WAIT))
-        else:
-            break
-
-    summary = "; ".join(f"{c.label}: {type(e).__name__}" for c, e in problems.items())
+        except RateLimitError as e:
+            hint = e.retry_after if e.retry_after is not None else DEFAULT_COOLDOWN
+            delay = min(hint + 1, MAX_COOLDOWN) if hint > 0 else 0
+            _COOLDOWN[cfg] = time.time() + delay
+            problems[cfg] = e
+            tries[cfg] = tries.get(cfg, 0) + 1
+            if tries[cfg] >= MAX_RATE_LIMIT_TRIES:
+                alive.remove(cfg)
+        except (AuthError, BadRequestError, BadOutputError, ProviderError) as e:
+            problems[cfg] = e
+            alive.remove(cfg)
+    summary = "; ".join(f"{c.label}: {type(e).__name__}" for c, e in problems.items()) or "timed out waiting for rate limits"
     raise QuotaExhausted(f"All keys failed for '{node}'. {summary}")
 
 

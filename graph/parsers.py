@@ -1,6 +1,6 @@
 from typing import List, Tuple
 
-from graph.schemas import ParsedJD, ParsedCV, assign_ids
+from graph.schemas import ParsedJD, ParsedCV, ReqType, assign_ids
 from llm.router import call_llm, KeyConfig
 from utils.cache import PARSE_CACHE, ParseCache
 from utils.textnorm import normalize, term_in_text
@@ -19,6 +19,7 @@ Rules:
 - keywords (per requirement): exact tool/skill/technology terms as written in the text. Never invent terms. Max 5.
 - keywords (top level): the 10-25 most important terms, exactly as written in the text.
 - Skip company description, benefits, salary and application instructions.
+- required_level: only for skill or tool requirements, and only when the wording states a level. "basic", "familiarity", "awareness" = basic. "working knowledge", "hands-on", "experience with", "ability to use" = intermediate. "proficient", "proficiency", "strong", "solid", "advanced", "excellent" = advanced. "expert", "expertise", "mastery", "deep" = professional. Otherwise leave it empty.
 - Leave every id as an empty string.
 - Maximum 20 requirements. Keep the most important ones."""
 
@@ -66,6 +67,8 @@ def clean_jd(jd: ParsedJD, jd_text: str) -> Tuple[ParsedJD, List[str]]:
         seen.add(key)
         r.text = text[:200]
         r.keywords = _filter_terms(r.keywords, norm, 5)
+        if r.type not in (ReqType.SKILL, ReqType.TOOL):
+            r.required_level = ""
         if r.min_years is not None and not (0 < r.min_years <= 40):
             r.min_years = None
         reqs.append(r)
