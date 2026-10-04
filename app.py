@@ -102,8 +102,7 @@ def sidebar_keys():
         st.markdown(
             "1. Click one of the links above and sign in or sign up (free).\n"
             "2. Create a new API key and copy it.\n"
-            "3. Paste it into the **Key 1** box below. Set **Key 1 provider** to match: "
-            "Groq keys start with `gsk_`, Google keys start with `AIza`.\n"
+            "3. Paste it into the **Key 1** box below. Set **Key 1 provider** to the service the key came from (Groq or Gemini).\n"
             "4. Click **Test keys**. A green tick means you are ready.\n\n"
             "Free keys have usage limits, so if you see a rate-limit message, wait a minute and try again. "
             "Never share your key with anyone.")

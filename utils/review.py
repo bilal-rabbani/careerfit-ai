@@ -144,10 +144,6 @@ def key_format_hint(provider: str, key: str) -> str:
         return ""
     if any(c.isspace() for c in k):
         return "This key contains spaces. Copy it again."
-    if provider == "groq" and not k.startswith("gsk_"):
-        return "Groq keys usually start with gsk_. Check the provider."
-    if provider == "gemini" and not k.startswith("AIza"):
-        return "Google keys usually start with AIza. Check the provider."
     return ""
 
 
