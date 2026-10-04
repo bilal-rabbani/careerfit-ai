@@ -94,8 +94,19 @@ def server_keys():
 def sidebar_keys():
     sb = st.sidebar
     sb.header("🔑 API keys")
-    sb.caption("Free keys: console.groq.com/keys and aistudio.google.com/apikey. "
-               "Keys stay in this browser session only. They are never saved or logged.")
+    sb.markdown("Get a free key in about a minute:  \n"
+                "- [Groq keys page](https://console.groq.com/keys)  \n"
+                "- [Google Gemini keys page](https://aistudio.google.com/apikey)")
+    sb.caption("Keys stay in this browser session only. They are never saved or logged.")
+    with sb.expander("How to get and use a key"):
+        st.markdown(
+            "1. Click one of the links above and sign in or sign up (free).\n"
+            "2. Create a new API key and copy it.\n"
+            "3. Paste it into the **Key 1** box below. Set **Key 1 provider** to match: "
+            "Groq keys start with `gsk_`, Google keys start with `AIza`.\n"
+            "4. Click **Test keys**. A green tick means you are ready.\n\n"
+            "Free keys have usage limits, so if you see a rate-limit message, wait a minute and try again. "
+            "Never share your key with anyone.")
     n = int(sb.number_input("Number of keys", min_value=1, max_value=6, value=1, key="n_keys"))
     keys = []
     for i in range(n):
