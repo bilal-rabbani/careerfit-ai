@@ -2,7 +2,7 @@
 
 **Match Your Skills. Improve Your CV. Apply with Confidence.**
 
-CareerFit AI compares a CV with a job description, shows which requirements are met, unclear or missed, and suggests CV wording that only uses terms the CV already supports. It focuses on **evidence and honesty** instead of an arbitrary match percentage.
+CareerFit AI compares a CV with a job description(JD), shows which requirements are met, unclear or missed, and suggests CV wording that only uses terms the CV already supports. It focuses on **evidence and honesty** instead of an arbitrary match percentage.
 
 - **Live app:** https://careerfit-ai-v01.streamlit.app/  _(the first load after a quiet period can take a minute)_
 - **Code:** https://github.com/bilal-rabbani/CareerFit-AI
