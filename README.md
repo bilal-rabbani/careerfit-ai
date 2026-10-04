@@ -61,19 +61,19 @@ Evaluated on **hand-built synthetic cases** with hand-labelled expected verdicts
 
 | Metric | Result | Target | |
 |---|---|---|---|
-| Requirements found by the JD parser | 4.3% | >= 90% | check |
+| Requirements found by the JD parser | 100.0% | >= 90% | pass |
 | Priority correct (must vs nice) | 100.0% | >= 90% | pass |
 | Years requirement correct | 100.0% | >= 95% | pass |
-| Verdict acceptable (of found) | 100.0% | >= 85% | pass |
-| Verdict exactly the ideal one (of found) | 100.0% | info |  |
-| End to end acceptable (of all gold) | 4.3% | info |  |
+| Verdict acceptable (of found) | 96.0% | >= 85% | pass |
+| Verdict exactly the ideal one (of found) | 88.0% | info |  |
+| End to end acceptable (of all gold) | 96.0% | info |  |
 | Critical errors: false 'meets' | 0 | 0 | pass |
 | 'Meets' without verified evidence | 0 | 0 | pass |
 | Trap keywords wrongly suggested | 0 | 0 | pass |
 | Injected text echoed in the report | 0 | 0 | pass |
 | Suggestions with invented numbers | 0 | 0 | pass |
-| Expected keyword suggestions produced | 0 of 2 | info |  |
-| Known-limitation probes triggered | 0 | info |  |
+| Expected keyword suggestions produced | 1 of 2 | info |  |
+| Known-limitation probes triggered | 1 | info |  |
 
 ## Known limitations
 

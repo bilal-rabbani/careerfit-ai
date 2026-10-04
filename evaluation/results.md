@@ -1,6 +1,6 @@
 # CareerFit AI evaluation (run3)
 
-Date: 2026-10-03 | Models: gemini/gemini-3.8-flash, groq/openai/gpt-oss-120b | Cases: 9 | Gold requirements: 50 | LLM requests: 55
+Date: 2026-10-04 | Models: see run files | Cases: 9 | Gold requirements: 50 | LLM requests: 55
 
 All cases are synthetic, hand-written and hand-labelled. With this few requirements, one change moves a percentage a lot, so read the numbers as a rough guide, not a benchmark. The targets are working goals I chose, not industry standards.
 

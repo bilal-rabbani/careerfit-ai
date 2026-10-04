@@ -27,7 +27,7 @@ def render_bug_table(bugs: List[Dict]) -> str:
 
 def render_results(scored, cases_all, label, models) -> str:
     agg, bugs = aggregate(scored), collect_bugs(scored)
-    ge = lambda v, t: "pass" if v is not None and v >= t else "check"
+    ge = lambda v, t: "pass" if v is not None and v >= t else "BELOW TARGET"
     zero = lambda n: "pass" if n == 0 else "FIX"
 
     L = [f"# CareerFit AI evaluation ({_c(label)})", "",
