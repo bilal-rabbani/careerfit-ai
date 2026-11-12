@@ -105,3 +105,7 @@ GEMINI_API_KEY = "..."
 ## Tech
 
 Python, Streamlit, LangGraph, Pydantic, Groq and Gemini REST APIs, pdfplumber, python-docx, rapidfuzz.
+
+
+## License
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
