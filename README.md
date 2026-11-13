@@ -57,16 +57,16 @@ flowchart TD
 
 ## Evaluation
 
-Evaluated on **hand-built synthetic cases** with hand-labelled expected verdicts. The sample is small, so read the numbers as a rough guide, not a benchmark. The full table, per-case results and the bug report are in [`evaluation/`](evaluation/).
+Evaluated on **hand-built synthetic cases** with hand-labelled expected verdicts. The sample is small and the cases were also used while tuning the prompts, so treat the numbers as optimistic, not as a benchmark. The full table, per-case results and the bug report are in [`evaluation/`](evaluation/).
 
 | Metric | Result | Target | |
 |---|---|---|---|
 | Requirements found by the JD parser | 100.0% | >= 90% | pass |
 | Priority correct (must vs nice) | 100.0% | >= 90% | pass |
 | Years requirement correct | 100.0% | >= 95% | pass |
-| Verdict acceptable (of found) | 96.0% | >= 85% | pass |
-| Verdict exactly the ideal one (of found) | 88.0% | info |  |
-| End to end acceptable (of all gold) | 96.0% | info |  |
+| Verdict acceptable (of found) | 90.9% | >= 85% | pass |
+| Verdict exactly the ideal one (of found) | 87.3% | info |  |
+| End to end acceptable (of all gold) | 90.9% | info |  |
 | Critical errors: false 'meets' | 0 | 0 | pass |
 | 'Meets' without verified evidence | 0 | 0 | pass |
 | Trap keywords wrongly suggested | 0 | 0 | pass |
@@ -82,6 +82,7 @@ Evaluated on **hand-built synthetic cases** with hand-labelled expected verdicts
 - Requirements with alternatives ("Salesforce or HubSpot") can be marked as met through either option.
 - Soft skills are never scored.
 - Free-tier models vary between runs and can be rate limited. Model names may need updating in `llm/config.py`.
+- Skill levels (basic, advanced) and evidence strength are judged by the AI from the CV's wording, so check them.
 - Output is a guide, not hiring advice.
 
 ## Run it yourself

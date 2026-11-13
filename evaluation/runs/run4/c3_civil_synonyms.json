@@ -1,0 +1,227 @@
+{
+ "case_id": "c3_civil_synonyms",
+ "requests": 4,
+ "elapsed": 9.0,
+ "parsed_jd": {
+  "job_title": "Planning Engineer - Highway Project",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "BSc in Civil Engineering",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "required_level": "",
+    "keywords": [
+     "BSc",
+     "Civil Engineering"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "3 years project scheduling experience",
+    "type": "experience",
+    "priority": "must_have",
+    "min_years": 3.0,
+    "required_level": "",
+    "keywords": [
+     "project scheduling"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Primavera P6 proficiency",
+    "type": "tool",
+    "priority": "must_have",
+    "min_years": null,
+    "required_level": "advanced",
+    "keywords": [
+     "Primavera P6"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "Earned Value Management knowledge",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "required_level": "basic",
+    "keywords": [
+     "Earned Value Management"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Resource loading and leveling experience",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "required_level": "intermediate",
+    "keywords": [
+     "resource loading",
+     "leveling"
+    ]
+   },
+   {
+    "id": "R6",
+    "text": "MS Project",
+    "type": "tool",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "required_level": "",
+    "keywords": [
+     "MS Project"
+    ]
+   }
+  ],
+  "keywords": [
+   "Planning Engineer",
+   "Highway Project",
+   "BSc",
+   "Civil Engineering",
+   "project scheduling",
+   "Primavera P6",
+   "Earned Value Management",
+   "resource loading",
+   "leveling",
+   "MS Project"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "meets",
+   "evidence_snippet": "BSc Civil Engineering, Northfield University, 2020",
+   "reason": "Degree matches required BSc in Civil Engineering",
+   "verified": true,
+   "strength": "strong",
+   "fix": "none",
+   "cv_level": "",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "meets",
+   "evidence_snippet": "Planning Engineer, Indus Builders (2020-06 to 2024-05)",
+   "reason": "About 4.0 years across the relevant roles (required: 3+).",
+   "verified": true,
+   "strength": "strong",
+   "fix": "none",
+   "cv_level": "",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "unclear",
+   "evidence_snippet": "Prepared and updated baseline schedules in Primavera P6 for a 40 km highway project",
+   "reason": "Level of Primavera P6 proficiency not specified",
+   "verified": true,
+   "strength": "partial",
+   "fix": "trainable",
+   "cv_level": "intermediate",
+   "level_gap": true
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "meets",
+   "evidence_snippet": "Tracked progress using EVM and reported SPI and CPI to the project director",
+   "reason": "Shows Earned Value Management knowledge",
+   "verified": true,
+   "strength": "strong",
+   "fix": "none",
+   "cv_level": "intermediate",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "meets",
+   "evidence_snippet": "Assigned labour and equipment to activities and levelled resources to remove overloads",
+   "reason": "Demonstrates resource loading and leveling experience",
+   "verified": true,
+   "strength": "strong",
+   "fix": "none",
+   "cv_level": "intermediate",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R6",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false,
+   "strength": "none",
+   "fix": "cv_fixable",
+   "cv_level": "",
+   "level_gap": false
+  }
+ ],
+ "keywords": {
+  "present": [
+   "Primavera P6"
+  ],
+  "missing_supported": [
+   "Earned Value Management",
+   "resource loading",
+   "leveling"
+  ],
+  "missing_unsupported": [
+   "MS Project"
+  ],
+  "groups": [
+   {
+    "requirement": "Primavera P6 proficiency",
+    "present": [
+     "Primavera P6"
+    ],
+    "supported": [],
+    "unsupported": []
+   },
+   {
+    "requirement": "Earned Value Management knowledge",
+    "present": [],
+    "supported": [
+     "Earned Value Management"
+    ],
+    "unsupported": []
+   },
+   {
+    "requirement": "Resource loading and leveling experience",
+    "present": [],
+    "supported": [
+     "resource loading",
+     "leveling"
+    ],
+    "unsupported": []
+   },
+   {
+    "requirement": "MS Project",
+    "present": [],
+    "supported": [],
+    "unsupported": [
+     "MS Project"
+    ]
+   }
+  ]
+ },
+ "suggestions": [
+  {
+   "original": "Tracked progress using EVM and reported SPI and CPI to the project director",
+   "suggested": "Performed Earned Value Management, reporting SPI and CPI to the project director.",
+   "keywords_used": [
+    "Earned Value Management"
+   ],
+   "job": "Planning Engineer"
+  },
+  {
+   "original": "Assigned labour and equipment to activities and levelled resources to remove overloads",
+   "suggested": "Executed resource loading and leveling to assign labour and equipment and remove overloads.",
+   "keywords_used": [
+    "resource loading",
+    "leveling"
+   ],
+   "job": "Planning Engineer"
+  }
+ ],
+ "markdown": "# CareerFit AI report: Planning Engineer - Highway Project\n\nYou meet 4 of 5 must-have requirements that can be checked from a CV. Of the rest, 1 need learning or a credential. 3 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 4 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Needs learning or a credential\n\nYou can build these. Do a small real project or a course, then show it under Projects or in a job bullet.\n\n- \ud83d\udfe1 **Primavera P6 proficiency** (must-have) \u00b7 Partial evidence \u00b7 CV level: intermediate, job asks: advanced\n  - Level of Primavera P6 proficiency not specified\n  - Your CV says: \"Prepared and updated baseline schedules in Primavera P6 for a 40 km highway project\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **MS Project** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **BSc in Civil Engineering** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BSc Civil Engineering, Northfield University, 2020\"\n- \ud83d\udfe2 **3 years project scheduling experience** (must-have) \u00b7 Strong evidence\n  - About 4.0 years across the relevant roles (required: 3+).\n  - Your CV says: \"Planning Engineer, Indus Builders (2020-06 to 2024-05)\"\n- \ud83d\udfe2 **Earned Value Management knowledge** (must-have) \u00b7 Strong evidence \u00b7 CV level: intermediate, job asks: basic\n  - Your CV says: \"Tracked progress using EVM and reported SPI and CPI to the project director\"\n- \ud83d\udfe2 **Resource loading and leveling experience** (must-have) \u00b7 Strong evidence \u00b7 CV level: intermediate, job asks: intermediate\n  - Your CV says: \"Assigned labour and equipment to activities and levelled resources to remove overloads\"\n\n## Keyword analysis\n\n**Already in your CV:** Primavera P6\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- Earned Value Management (for: Earned Value Management knowledge) (your CV says: \"Tracked progress using EVM and reported SPI and CPI to the project director\")\n- resource loading, leveling (for: Resource loading and leveling experience) (your CV says: \"Assigned labour and equipment to activities and levelled resources to remove overloads\")\n\n**Not supported by your CV. Add only if you truly have this experience:** MS Project\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Tracked progress using EVM and reported SPI and CPI to the project director (Planning Engineer)\n  **Suggested:** Performed Earned Value Management, reporting SPI and CPI to the project director.\n  Keywords: Earned Value Management\n\n- **Original:** Assigned labour and equipment to activities and levelled resources to remove overloads (Planning Engineer)\n  **Suggested:** Executed resource loading and leveling to assign labour and equipment and remove overloads.\n  Keywords: resource loading, leveling\n",
+ "warnings": []
+}

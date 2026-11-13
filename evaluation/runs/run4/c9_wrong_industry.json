@@ -1,0 +1,169 @@
+{
+ "case_id": "c9_wrong_industry",
+ "requests": 3,
+ "elapsed": 4.5,
+ "parsed_jd": {
+  "job_title": "Software Engineer",
+  "requirements": [
+   {
+    "id": "R1",
+    "text": "Bachelor's degree in CS, IT, or related field",
+    "type": "education",
+    "priority": "must_have",
+    "min_years": null,
+    "required_level": "",
+    "keywords": [
+     "Bachelor's degree",
+     "CS",
+     "IT",
+     "related field"
+    ]
+   },
+   {
+    "id": "R2",
+    "text": "4+ years professional software development experience",
+    "type": "experience",
+    "priority": "must_have",
+    "min_years": 4.0,
+    "required_level": "",
+    "keywords": [
+     "software development",
+     "professional",
+     "years"
+    ]
+   },
+   {
+    "id": "R3",
+    "text": "Proficiency in C++",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "required_level": "advanced",
+    "keywords": [
+     "C++"
+    ]
+   },
+   {
+    "id": "R4",
+    "text": "Proficiency in Rust",
+    "type": "skill",
+    "priority": "must_have",
+    "min_years": null,
+    "required_level": "advanced",
+    "keywords": [
+     "Rust"
+    ]
+   },
+   {
+    "id": "R5",
+    "text": "Experience with distributed systems",
+    "type": "experience",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "required_level": "",
+    "keywords": [
+     "distributed systems"
+    ]
+   }
+  ],
+  "keywords": [
+   "Software Engineer",
+   "Bachelor's degree",
+   "CS",
+   "IT",
+   "related field",
+   "4+ years",
+   "professional",
+   "software development",
+   "C++",
+   "Rust",
+   "distributed systems"
+  ]
+ },
+ "results": [
+  {
+   "requirement_id": "R1",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "Bachelor of Science, Civil Engineering, Northfield University, 2023",
+   "reason": "Degree is civil engineering, not CS/IT or related field",
+   "verified": true,
+   "strength": "none",
+   "fix": "genuine_gap",
+   "cv_level": "",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R2",
+   "verdict": "does_not_meet",
+   "evidence_snippet": "Assistant Planning Engineer, Indus Builders (2023-01 to 2025-06)",
+   "reason": "Role is civil engineering, not software development and less than 4 years",
+   "verified": true,
+   "strength": "weak",
+   "fix": "genuine_gap",
+   "cv_level": "",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R3",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "C++ proficiency not mentioned in CV",
+   "verified": false,
+   "strength": "none",
+   "fix": "cv_fixable",
+   "cv_level": "",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R4",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "Rust proficiency not mentioned in CV",
+   "verified": false,
+   "strength": "none",
+   "fix": "cv_fixable",
+   "cv_level": "",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R5",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "Distributed systems experience not mentioned in CV",
+   "verified": false,
+   "strength": "none",
+   "fix": "cv_fixable",
+   "cv_level": "",
+   "level_gap": false
+  }
+ ],
+ "keywords": {
+  "present": [],
+  "missing_supported": [],
+  "missing_unsupported": [
+   "C++",
+   "Rust"
+  ],
+  "groups": [
+   {
+    "requirement": "Proficiency in C++",
+    "present": [],
+    "supported": [],
+    "unsupported": [
+     "C++"
+    ]
+   },
+   {
+    "requirement": "Proficiency in Rust",
+    "present": [],
+    "supported": [],
+    "unsupported": [
+     "Rust"
+    ]
+   }
+  ]
+ },
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Software Engineer\n\nYou meet 0 of 4 must-have requirements that can be checked from a CV. Of the rest, 2 can't be fixed by rewording, 2 may only need clearer wording.\n\n**Must-have requirements met: 0 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udd34 **Bachelor's degree in CS, IT, or related field** (must-have) \u00b7 No evidence found\n  - Degree is civil engineering, not CS/IT or related field\n  - Your CV says: \"Bachelor of Science, Civil Engineering, Northfield University, 2023\"\n- \ud83d\udd34 **4+ years professional software development experience** (must-have) \u00b7 Weak evidence (listed only)\n  - Role is civil engineering, not software development and less than 4 years\n  - Your CV says: \"Assistant Planning Engineer, Indus Builders (2023-01 to 2025-06)\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Proficiency in C++** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Proficiency in Rust** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Experience with distributed systems** (nice-to-have) \u00b7 No evidence found\n  - Add it to: the dates and bullets of the relevant job\n\n## Keyword analysis\n\n**Already in your CV:** none\n\n**Not supported by your CV. Add only if you truly have this experience:** C++, Rust\n",
+ "warnings": []
+}

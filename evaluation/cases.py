@@ -294,4 +294,33 @@ Primavera P6, AutoCAD, Excel""",
      G("Experience with distributed systems", N, ["unclear", "does_not_meet"]),
  ],
  "trap_keywords": ["C++", "Rust", "CS"]},
+
+# ---------------------------------------------------------------- 10
+{"id": "c10_skill_level", "title": "Basic skill vs proficiency requirement",
+ "jd": """Graphic Designer
+Requirements:
+- 2+ years of graphic design experience (required)
+- Proficiency in Adobe After Effects (required)
+- Experience with Figma (required)
+- Experience creating social media graphics (required)
+- Experience with Google Ads creatives is a plus""",
+ "cv": """Noor Fatima
+Graphic Designer
+Experience
+Graphic Designer, Studio Nine (2022-03 to 2025-06)
+- Designed social media graphics, banners and brand kits for 15 client accounts
+- Built landing page and app screen layouts in Figma, including shared component libraries
+- Handed over Figma files to developers and revised layouts after review
+Education
+BA Visual Design, Northfield University, 2021
+Skills
+Figma, Photoshop, Illustrator, Canva, Basic Adobe After Effects""",
+ "gold": [
+     G("2+ years of graphic design experience", M, ["meets"], 2),
+     G("Proficiency in Adobe After Effects", M, ["does_not_meet", "unclear"]),
+     G("Experience with Figma", M, ["meets"]),
+     G("Experience creating social media graphics", M, ["meets"]),
+     G("Experience with Google Ads creatives", N, ["unclear", "does_not_meet"]),
+ ],
+ "trap_keywords": ["Google Ads"]},
 ]
