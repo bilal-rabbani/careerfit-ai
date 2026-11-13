@@ -1,6 +1,8 @@
 from datetime import date
 from typing import Dict, List, Optional
 
+import re
+
 from rapidfuzz import fuzz
 
 from graph import advice
@@ -10,6 +12,16 @@ from utils.experience import years_of_experience, fmt_years
 from utils.textnorm import normalize, term_in_text
 
 FUZZY_THRESHOLD = 90
+LOW_LEVEL = re.compile(r"\b(basic|beginner|elementary|novice|familiar(?:ity)?|exposure)\b", re.I)
+_STRONG_WORDS = re.compile(r"\b(proficien\w*|strong|solid|advanced|excellent|extensive)\b", re.I)
+_EXPERT_WORDS = re.compile(r"\b(expert\w*|mastery|deep)\b", re.I)
+
+
+def _implied_level(text: str) -> str:
+    """Level a requirement's wording implies, used when the parser left required_level empty."""
+    if _EXPERT_WORDS.search(text or ""):
+        return "professional"
+    return "advanced" if _STRONG_WORDS.search(text or "") else ""
 MAX_SNIPPET = 400        # longer than this = the model dumped a section, not a quote
 SHORT_SNIPPET = 20       # below this, fuzzy matching is meaningless: require a whole-term match
 
@@ -136,6 +148,10 @@ def finalize_results(requirements: List[JDRequirement], matches: List[LLMMatch],
             else:
                 res = _verify_one(req, m, norm_cv)
                 have, need = norm_level(m.cv_level), norm_level(req.required_level)
+                if not have and res.verified and LOW_LEVEL.search(res.evidence_snippet or ""):
+                    have = "basic"                       # the quoted CV text itself says basic or familiar
+                if not need:
+                    need = _implied_level(req.text)
                 res.cv_level = have
                 if req.min_years and res.verdict == Verdict.MEETS:   # years can't be confirmed -> don't claim it
                     res.verdict = Verdict.UNCLEAR

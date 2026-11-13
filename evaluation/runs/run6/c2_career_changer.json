@@ -1,7 +1,7 @@
 {
  "case_id": "c2_career_changer",
  "requests": 3,
- "elapsed": 5.9,
+ "elapsed": 5.6,
  "parsed_jd": {
   "job_title": "Data Analyst",
   "requirements": [
@@ -22,7 +22,7 @@
    },
    {
     "id": "R2",
-    "text": "2+ years experience as data analyst",
+    "text": "2+ years experience as a data analyst",
     "type": "experience",
     "priority": "must_have",
     "min_years": 2.0,
@@ -85,7 +85,6 @@
    }
   ],
   "keywords": [
-   "Data Analyst",
    "Bachelor's degree",
    "Statistics",
    "Mathematics",
@@ -96,10 +95,11 @@
    "Python",
    "R",
    "A/B testing",
+   "data analyst",
    "experience",
-   "strong",
-   "proficiency",
-   "2+ years"
+   "Strong",
+   "Proficiency",
+   "plus"
   ]
  },
  "results": [
@@ -107,7 +107,7 @@
    "requirement_id": "R1",
    "verdict": "does_not_meet",
    "evidence_snippet": "BA English Literature, Northfield University, 2018",
-   "reason": "Degree is not in required fields",
+   "reason": "Degree is English Literature, not a required field",
    "verified": true,
    "strength": "none",
    "fix": "genuine_gap",
@@ -118,7 +118,7 @@
    "requirement_id": "R2",
    "verdict": "does_not_meet",
    "evidence_snippet": "",
-   "reason": "No data analyst experience listed",
+   "reason": "No data analyst experience shown",
    "verified": false,
    "strength": "none",
    "fix": "genuine_gap",
@@ -129,7 +129,7 @@
    "requirement_id": "R3",
    "verdict": "does_not_meet",
    "evidence_snippet": "basic SQL",
-   "reason": "Only basic SQL listed, not advanced",
+   "reason": "SQL skill listed as basic, not advanced",
    "verified": true,
    "strength": "partial",
    "fix": "trainable",
@@ -222,6 +222,6 @@
   ]
  },
  "suggestions": [],
- "markdown": "# CareerFit AI report: Data Analyst\n\nYou meet 0 of 5 must-have requirements that can be checked from a CV. Of the rest, 2 can't be fixed by rewording, 1 need learning or a credential, 2 may only need clearer wording.\n\n**Must-have requirements met: 0 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udd34 **Bachelor's degree in Statistics, Mathematics, Economics or related field** (must-have) \u00b7 No evidence found\n  - Degree is not in required fields\n  - Your CV says: \"BA English Literature, Northfield University, 2018\"\n- \ud83d\udd34 **2+ years experience as data analyst** (must-have) \u00b7 No evidence found\n  - No data analyst experience listed\n\n### Needs learning or a credential\n\nYou can build these. Do a small real project or a course, then show it under Projects or in a job bullet.\n\n- \ud83d\udd34 **Strong SQL skills** (must-have) \u00b7 Partial evidence \u00b7 CV level: basic, job asks: advanced\n  - Only basic SQL listed, not advanced\n  - Your CV says: \"basic SQL\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with Tableau or Power BI** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Proficiency in Python or R** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Experience with A/B testing** (nice-to-have) \u00b7 No evidence found\n\n## Keyword analysis\n\n**Already in your CV:** SQL\n\n**Not supported by your CV. Add only if you truly have this experience:** Tableau, Power BI, Python, R, Proficiency, A/B testing\n",
+ "markdown": "# CareerFit AI report: Data Analyst\n\nYou meet 0 of 5 must-have requirements that can be checked from a CV. Of the rest, 2 can't be fixed by rewording, 1 need learning or a credential, 2 may only need clearer wording.\n\n**Must-have requirements met: 0 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udd34 **Bachelor's degree in Statistics, Mathematics, Economics or related field** (must-have) \u00b7 No evidence found\n  - Degree is English Literature, not a required field\n  - Your CV says: \"BA English Literature, Northfield University, 2018\"\n- \ud83d\udd34 **2+ years experience as a data analyst** (must-have) \u00b7 No evidence found\n  - No data analyst experience shown\n\n### Needs learning or a credential\n\nYou can build these. Do a small real project or a course, then show it under Projects or in a job bullet.\n\n- \ud83d\udd34 **Strong SQL skills** (must-have) \u00b7 Partial evidence \u00b7 CV level: basic, job asks: advanced\n  - SQL skill listed as basic, not advanced\n  - Your CV says: \"basic SQL\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with Tableau or Power BI** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Proficiency in Python or R** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Experience with A/B testing** (nice-to-have) \u00b7 No evidence found\n\n## Keyword analysis\n\n**Already in your CV:** SQL\n\n**Not supported by your CV. Add only if you truly have this experience:** Tableau, Power BI, Python, R, Proficiency, A/B testing\n",
  "warnings": []
 }

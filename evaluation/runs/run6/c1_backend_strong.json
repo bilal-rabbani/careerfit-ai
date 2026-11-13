@@ -1,7 +1,7 @@
 {
  "case_id": "c1_backend_strong",
  "requests": 5,
- "elapsed": 7.6,
+ "elapsed": 6.9,
  "parsed_jd": {
   "job_title": "Backend Engineer",
   "requirements": [
@@ -14,7 +14,8 @@
     "required_level": "",
     "keywords": [
      "Bachelor's degree",
-     "Computer Science"
+     "Computer Science",
+     "related field"
     ]
    },
    {
@@ -23,7 +24,7 @@
     "type": "skill",
     "priority": "must_have",
     "min_years": 3.0,
-    "required_level": "",
+    "required_level": "professional",
     "keywords": [
      "Python"
     ]
@@ -31,14 +32,14 @@
    {
     "id": "R3",
     "text": "Build REST APIs using FastAPI or Flask",
-    "type": "skill",
+    "type": "tool",
     "priority": "must_have",
     "min_years": null,
     "required_level": "intermediate",
     "keywords": [
-     "REST APIs",
      "FastAPI",
-     "Flask"
+     "Flask",
+     "REST APIs"
     ]
    },
    {
@@ -58,7 +59,7 @@
     "type": "tool",
     "priority": "must_have",
     "min_years": null,
-    "required_level": "",
+    "required_level": "intermediate",
     "keywords": [
      "Docker"
     ]
@@ -87,18 +88,17 @@
    }
   ],
   "keywords": [
-   "Backend Engineer",
-   "payments",
    "Bachelor's degree",
    "Computer Science",
    "Python",
-   "REST APIs",
    "FastAPI",
    "Flask",
+   "REST APIs",
    "PostgreSQL",
    "Docker",
    "AWS",
-   "CI/CD pipelines"
+   "CI/CD pipelines",
+   "payments"
   ]
  },
  "results": [
@@ -106,7 +106,7 @@
    "requirement_id": "R1",
    "verdict": "meets",
    "evidence_snippet": "BSc Computer Science, Northfield University, 2017",
-   "reason": "Bachelor's in Computer Science matches requirement",
+   "reason": "Bachelor's degree in Computer Science matches requirement",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -128,7 +128,7 @@
    "requirement_id": "R3",
    "verdict": "meets",
    "evidence_snippet": "Built REST APIs with FastAPI that handled payment and invoicing workflows",
-   "reason": "Demonstrated building REST APIs with FastAPI",
+   "reason": "Demonstrates building REST APIs with FastAPI",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -139,7 +139,7 @@
    "requirement_id": "R4",
    "verdict": "meets",
    "evidence_snippet": "Designed PostgreSQL schemas and optimised slow queries",
-   "reason": "Shows solid PostgreSQL design and optimization work",
+   "reason": "Shows solid PostgreSQL knowledge and optimization",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -150,7 +150,7 @@
    "requirement_id": "R5",
    "verdict": "meets",
    "evidence_snippet": "Containerised services with Docker and Docker Compose",
-   "reason": "Docker usage is explicitly listed in a job bullet.",
+   "reason": "Docker usage demonstrated in Nova Labs role.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -172,7 +172,7 @@
    "requirement_id": "R7",
    "verdict": "meets",
    "evidence_snippet": "Set up GitHub Actions pipelines for automated testing and deployment",
-   "reason": "CI/CD pipelines are demonstrated via GitHub Actions setup.",
+   "reason": "CI/CD pipelines set up using GitHub Actions.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -183,8 +183,8 @@
  "keywords": {
   "present": [
    "Python",
-   "REST APIs",
    "FastAPI",
+   "REST APIs",
    "PostgreSQL",
    "Docker"
   ],
@@ -207,8 +207,8 @@
    {
     "requirement": "Build REST APIs using FastAPI or Flask",
     "present": [
-     "REST APIs",
-     "FastAPI"
+     "FastAPI",
+     "REST APIs"
     ],
     "supported": [
      "Flask"
@@ -259,6 +259,6 @@
    "job": "Software Engineer"
   }
  ],
- "markdown": "# CareerFit AI report: Backend Engineer\n\nYou meet 5 of 5 must-have requirements that can be checked from a CV. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 5 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with AWS** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Bachelor's degree in Computer Science or related field** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BSc Computer Science, Northfield University, 2017\"\n- \ud83d\udfe2 **3+ years professional Python experience** (must-have) \u00b7 Strong evidence\n  - About 5.5 years across the relevant roles (required: 3+).\n  - Your CV says: \"Software Engineer, Nova Labs (2019-03 to 2023-06); Junior Developer, Pixel Works (2018-01 to 2019-02)\"\n- \ud83d\udfe2 **Build REST APIs using FastAPI or Flask** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Built REST APIs with FastAPI that handled payment and invoicing workflows\"\n- \ud83d\udfe2 **Solid knowledge of PostgreSQL** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Designed PostgreSQL schemas and optimised slow queries\"\n- \ud83d\udfe2 **Docker experience** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Containerised services with Docker and Docker Compose\"\n- \ud83d\udfe2 **Experience with CI/CD pipelines** (nice-to-have) \u00b7 Strong evidence\n  - Your CV says: \"Set up GitHub Actions pipelines for automated testing and deployment\"\n\n## Keyword analysis\n\n**Already in your CV:** Python, REST APIs, FastAPI, PostgreSQL, Docker\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- Flask (for: Build REST APIs using FastAPI or Flask) (your CV says: \"Built REST APIs with FastAPI that handled payment and invoicing workflows\")\n- CI/CD pipelines (for: Experience with CI/CD pipelines) (your CV says: \"Set up GitHub Actions pipelines for automated testing and deployment\")\n\n**Not supported by your CV. Add only if you truly have this experience:** AWS\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Set up GitHub Actions pipelines for automated testing and deployment (Software Engineer)\n  **Suggested:** Implemented CI/CD pipelines for automated testing and deployment\n  Keywords: CI/CD pipelines\n",
+ "markdown": "# CareerFit AI report: Backend Engineer\n\nYou meet 5 of 5 must-have requirements that can be checked from a CV. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 5 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with AWS** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Bachelor's degree in Computer Science or related field** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BSc Computer Science, Northfield University, 2017\"\n- \ud83d\udfe2 **3+ years professional Python experience** (must-have) \u00b7 Strong evidence\n  - About 5.5 years across the relevant roles (required: 3+).\n  - Your CV says: \"Software Engineer, Nova Labs (2019-03 to 2023-06); Junior Developer, Pixel Works (2018-01 to 2019-02)\"\n- \ud83d\udfe2 **Build REST APIs using FastAPI or Flask** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Built REST APIs with FastAPI that handled payment and invoicing workflows\"\n- \ud83d\udfe2 **Solid knowledge of PostgreSQL** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Designed PostgreSQL schemas and optimised slow queries\"\n- \ud83d\udfe2 **Docker experience** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Containerised services with Docker and Docker Compose\"\n- \ud83d\udfe2 **Experience with CI/CD pipelines** (nice-to-have) \u00b7 Strong evidence\n  - Your CV says: \"Set up GitHub Actions pipelines for automated testing and deployment\"\n\n## Keyword analysis\n\n**Already in your CV:** Python, FastAPI, REST APIs, PostgreSQL, Docker\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- Flask (for: Build REST APIs using FastAPI or Flask) (your CV says: \"Built REST APIs with FastAPI that handled payment and invoicing workflows\")\n- CI/CD pipelines (for: Experience with CI/CD pipelines) (your CV says: \"Set up GitHub Actions pipelines for automated testing and deployment\")\n\n**Not supported by your CV. Add only if you truly have this experience:** AWS\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Set up GitHub Actions pipelines for automated testing and deployment (Software Engineer)\n  **Suggested:** Implemented CI/CD pipelines for automated testing and deployment\n  Keywords: CI/CD pipelines\n",
  "warnings": []
 }
