@@ -33,7 +33,9 @@ _EDU_GENERIC = {"bachelor", "bachelors", "bachelor s", "master", "masters", "mas
                 "experience", "engineering", "bs", "bsc", "ba", "ms", "msc", "mba", "required", "preferred",
                 "from", "accredited", "university", "technical", "subject", "such", "as", "to", "with", "s"}
 _EDU_GROUPS = [{"cs", "computer"}, {"it", "information", "technology"}, {"ee", "electrical"},
-               {"se", "software"}, {"ds", "data"}]
+               {"se", "software"}, {"ds", "data"},
+               {"bba", "bcom", "business", "commerce", "administration"},
+               {"bscs", "bcs", "cs", "computer"}, {"bsit", "bit", "it", "information", "technology"}]
 
 
 def education_field_ok(req_text: str, snippet: str) -> bool:

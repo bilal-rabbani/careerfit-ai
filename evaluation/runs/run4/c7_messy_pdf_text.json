@@ -1,7 +1,7 @@
 {
  "case_id": "c7_messy_pdf_text",
- "requests": 4,
- "elapsed": 7.9,
+ "requests": 5,
+ "elapsed": 8.0,
  "parsed_jd": {
   "job_title": "Marketing Executive",
   "requirements": [
@@ -60,34 +60,42 @@
     "min_years": null,
     "required_level": "",
     "keywords": [
-     "Content creation",
+     "content creation",
      "blogs",
      "social media"
     ]
    },
    {
     "id": "R6",
-    "text": "Paid advertising experience with Google Ads or Meta Ads",
-    "type": "skill",
+    "text": "Experience with Google Ads",
+    "type": "tool",
     "priority": "nice_to_have",
     "min_years": null,
     "required_level": "",
     "keywords": [
-     "paid advertising",
-     "Google Ads",
+     "Google Ads"
+    ]
+   },
+   {
+    "id": "R7",
+    "text": "Experience with Meta Ads",
+    "type": "tool",
+    "priority": "nice_to_have",
+    "min_years": null,
+    "required_level": "",
+    "keywords": [
      "Meta Ads"
     ]
    }
   ],
   "keywords": [
-   "Marketing Executive",
    "Bachelor's degree",
    "Marketing",
    "Business",
    "digital marketing",
    "SEO",
    "Google Analytics",
-   "Content creation",
+   "content creation",
    "blogs",
    "social media",
    "paid advertising",
@@ -100,7 +108,7 @@
    "requirement_id": "R1",
    "verdict": "meets",
    "evidence_snippet": "BBA (Marketing), Northfield University - 2021",
-   "reason": "Bachelor's degree in Marketing listed in education.",
+   "reason": "Bachelor's degree in Marketing matches requirement.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -121,19 +129,19 @@
   {
    "requirement_id": "R3",
    "verdict": "meets",
-   "evidence_snippet": "Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months",
-   "reason": "Planned and ran SEO campaigns, showing hands\u2011on experience.",
+   "evidence_snippet": "Planned and ran SEO campaigns that grew organic traffic by 60% over 8\nmonths",
+   "reason": "Demonstrates hands\u2011on SEO work.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
-   "cv_level": "intermediate",
+   "cv_level": "",
    "level_gap": false
   },
   {
    "requirement_id": "R4",
    "verdict": "meets",
-   "evidence_snippet": "Reported on website performance using Google Analytics every month",
-   "reason": "Monthly performance reports created using Google Analytics.",
+   "evidence_snippet": "Reported on website performance using Google\nAnalytics every month",
+   "reason": "Shows use of Google Analytics for reporting.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -144,7 +152,7 @@
    "requirement_id": "R5",
    "verdict": "meets",
    "evidence_snippet": "Wrote blog posts, newsletters and social media captions for 12 clients",
-   "reason": "Wrote blog posts, newsletters and social media captions.",
+   "reason": "Content creation for blogs and social media is demonstrated",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -153,6 +161,17 @@
   },
   {
    "requirement_id": "R6",
+   "verdict": "unclear",
+   "evidence_snippet": "",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "verified": false,
+   "strength": "none",
+   "fix": "cv_fixable",
+   "cv_level": "",
+   "level_gap": false
+  },
+  {
+   "requirement_id": "R7",
    "verdict": "unclear",
    "evidence_snippet": "",
    "reason": "No mention found in the CV, so it can't be confirmed either way.",
@@ -170,11 +189,10 @@
    "social media"
   ],
   "missing_supported": [
-   "Content creation",
+   "content creation",
    "blogs"
   ],
   "missing_unsupported": [
-   "paid advertising",
    "Google Ads",
    "Meta Ads"
   ],
@@ -201,18 +219,24 @@
      "social media"
     ],
     "supported": [
-     "Content creation",
+     "content creation",
      "blogs"
     ],
     "unsupported": []
    },
    {
-    "requirement": "Paid advertising experience with Google Ads or Meta Ads",
+    "requirement": "Experience with Google Ads",
     "present": [],
     "supported": [],
     "unsupported": [
-     "paid advertising",
-     "Google Ads",
+     "Google Ads"
+    ]
+   },
+   {
+    "requirement": "Experience with Meta Ads",
+    "present": [],
+    "supported": [],
+    "unsupported": [
      "Meta Ads"
     ]
    }
@@ -221,14 +245,14 @@
  "suggestions": [
   {
    "original": "Wrote blog posts, newsletters and social media captions for 12 clients",
-   "suggested": "Content creation and blogs for 12 clients via blog posts, newsletters, and social media captions.",
+   "suggested": "Content creation and blogs for 12 clients",
    "keywords_used": [
-    "Content creation",
+    "content creation",
     "blogs"
    ],
    "job": "MARKETING EXECUTIVE"
   }
  ],
- "markdown": "# CareerFit AI report: Marketing Executive\n\nYou meet 5 of 5 must-have requirements that can be checked from a CV. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 5 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Paid advertising experience with Google Ads or Meta Ads** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Bachelor's degree in Marketing, Business or related field** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BBA (Marketing), Northfield University - 2021\"\n- \ud83d\udfe2 **2+ years digital marketing experience** (must-have) \u00b7 Strong evidence\n  - About 2.7 years across the relevant roles (required: 2+).\n  - Your CV says: \"MARKETING EXECUTIVE, GrowthHive Agency (2022-01 to 2024-08)\"\n- \ud83d\udfe2 **Hands-on SEO experience** (must-have) \u00b7 Strong evidence \u00b7 CV level: intermediate, job asks: intermediate\n  - Your CV says: \"Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months\"\n- \ud83d\udfe2 **Google Analytics reporting** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Reported on website performance using Google Analytics every month\"\n- \ud83d\udfe2 **Content creation for blogs and social media** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Wrote blog posts, newsletters and social media captions for 12 clients\"\n\n## Keyword analysis\n\n**Already in your CV:** SEO, Google Analytics, social media\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- Content creation, blogs (for: Content creation for blogs and social media) (your CV says: \"Wrote blog posts, newsletters and social media captions for 12 clients\")\n\n**Not supported by your CV. Add only if you truly have this experience:** paid advertising, Google Ads, Meta Ads\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Wrote blog posts, newsletters and social media captions for 12 clients (MARKETING EXECUTIVE)\n  **Suggested:** Content creation and blogs for 12 clients via blog posts, newsletters, and social media captions.\n  Keywords: Content creation, blogs\n",
+ "markdown": "# CareerFit AI report: Marketing Executive\n\nYou meet 5 of 5 must-have requirements that can be checked from a CV. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 5 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with Google Ads** (nice-to-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Experience with Meta Ads** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Bachelor's degree in Marketing, Business or related field** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BBA (Marketing), Northfield University - 2021\"\n- \ud83d\udfe2 **2+ years digital marketing experience** (must-have) \u00b7 Strong evidence\n  - About 2.7 years across the relevant roles (required: 2+).\n  - Your CV says: \"MARKETING EXECUTIVE, GrowthHive Agency (2022-01 to 2024-08)\"\n- \ud83d\udfe2 **Hands-on SEO experience** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Planned and ran SEO campaigns that grew organic traffic by 60% over 8 months\"\n- \ud83d\udfe2 **Google Analytics reporting** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Reported on website performance using Google Analytics every month\"\n- \ud83d\udfe2 **Content creation for blogs and social media** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Wrote blog posts, newsletters and social media captions for 12 clients\"\n\n## Keyword analysis\n\n**Already in your CV:** SEO, Google Analytics, social media\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- content creation, blogs (for: Content creation for blogs and social media) (your CV says: \"Wrote blog posts, newsletters and social media captions for 12 clients\")\n\n**Not supported by your CV. Add only if you truly have this experience:** Google Ads, Meta Ads\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Wrote blog posts, newsletters and social media captions for 12 clients (MARKETING EXECUTIVE)\n  **Suggested:** Content creation and blogs for 12 clients\n  Keywords: content creation, blogs\n",
  "warnings": []
 }

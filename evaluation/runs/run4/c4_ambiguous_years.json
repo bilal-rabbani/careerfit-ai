@@ -1,19 +1,20 @@
 {
  "case_id": "c4_ambiguous_years",
- "requests": 4,
- "elapsed": 7.0,
+ "requests": 3,
+ "elapsed": 6.0,
  "parsed_jd": {
   "job_title": "Frontend Developer",
   "requirements": [
    {
     "id": "R1",
-    "text": "React experience",
+    "text": "React experience (4+ years)",
     "type": "skill",
     "priority": "must_have",
     "min_years": 4.0,
-    "required_level": "intermediate",
+    "required_level": "",
     "keywords": [
-     "React"
+     "React",
+     "experience"
     ]
    },
    {
@@ -33,9 +34,10 @@
     "type": "skill",
     "priority": "must_have",
     "min_years": null,
-    "required_level": "intermediate",
+    "required_level": "",
     "keywords": [
-     "REST APIs"
+     "REST",
+     "APIs"
     ]
    },
    {
@@ -57,13 +59,14 @@
     "min_years": null,
     "required_level": "",
     "keywords": [
-     "code review practices"
+     "code review",
+     "practices"
     ]
    },
    {
     "id": "R6",
     "text": "Next.js",
-    "type": "tool",
+    "type": "skill",
     "priority": "nice_to_have",
     "min_years": null,
     "required_level": "",
@@ -73,16 +76,16 @@
    }
   ],
   "keywords": [
+   "Frontend",
+   "Developer",
    "React",
    "TypeScript",
-   "REST APIs",
+   "REST",
+   "APIs",
    "Git",
-   "code review practices",
-   "Next.js",
-   "Frontend Developer",
-   "experience",
-   "integrating",
-   "plus"
+   "code review",
+   "practices",
+   "Next.js"
   ]
  },
  "results": [
@@ -101,7 +104,7 @@
    "requirement_id": "R2",
    "verdict": "meets",
    "evidence_snippet": "Built dashboards in React and TypeScript",
-   "reason": "TypeScript mentioned in work and skills",
+   "reason": "TypeScript explicitly used in work and listed in skills",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -112,11 +115,11 @@
    "requirement_id": "R3",
    "verdict": "meets",
    "evidence_snippet": "Integrated REST APIs for reporting screens",
-   "reason": "REST API integration explicitly listed",
+   "reason": "Shows integration of REST APIs in a project",
    "verified": true,
    "strength": "strong",
    "fix": "none",
-   "cv_level": "intermediate",
+   "cv_level": "",
    "level_gap": false
   },
   {
@@ -134,7 +137,7 @@
    "requirement_id": "R5",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "No mention of code review practices",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -145,7 +148,7 @@
    "requirement_id": "R6",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "Next.js not listed in CV",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -157,19 +160,19 @@
   "present": [
    "React",
    "TypeScript",
-   "REST APIs",
+   "REST",
+   "APIs",
    "Git"
   ],
-  "missing_supported": [
-   "integrating"
-  ],
+  "missing_supported": [],
   "missing_unsupported": [
-   "code review practices",
+   "code review",
+   "practices",
    "Next.js"
   ],
   "groups": [
    {
-    "requirement": "React experience",
+    "requirement": "React experience (4+ years)",
     "present": [
      "React"
     ],
@@ -187,11 +190,10 @@
    {
     "requirement": "Integrating REST APIs",
     "present": [
-     "REST APIs"
+     "REST",
+     "APIs"
     ],
-    "supported": [
-     "integrating"
-    ],
+    "supported": [],
     "unsupported": []
    },
    {
@@ -207,7 +209,8 @@
     "present": [],
     "supported": [],
     "unsupported": [
-     "code review practices"
+     "code review",
+     "practices"
     ]
    },
    {
@@ -220,16 +223,7 @@
    }
   ]
  },
- "suggestions": [
-  {
-   "original": "Integrated REST APIs for reporting screens",
-   "suggested": "integrating REST APIs for reporting screens",
-   "keywords_used": [
-    "integrating"
-   ],
-   "job": "Frontend Developer"
-  }
- ],
- "markdown": "# CareerFit AI report: Frontend Developer\n\nYou meet 3 of 5 must-have requirements that can be checked from a CV. Of the rest, 2 may only need clearer wording. 1 relevant keyword your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 3 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **React experience** (must-have) \u00b7 Partial evidence\n  - About 2.2\u20134.0 years found; 4+ required. Some dates are missing or only given as years, so this can't be confirmed.\n  - Your CV says: \"Frontend Developer, Brightside Studio (2021 to 2023); Freelance Web Developer, company (2022 to 2024)\"\n- \ud83d\udfe1 **code review practices** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Next.js** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **TypeScript** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Built dashboards in React and TypeScript\"\n- \ud83d\udfe2 **Integrating REST APIs** (must-have) \u00b7 Strong evidence \u00b7 CV level: intermediate, job asks: intermediate\n  - Your CV says: \"Integrated REST APIs for reporting screens\"\n- \ud83d\udfe2 **Git** (must-have) \u00b7 Weak evidence (listed only)\n  - Your CV says: \"Git\"\n\n## Keyword analysis\n\n**Already in your CV:** React, TypeScript, REST APIs, Git\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- integrating (for: Integrating REST APIs) (your CV says: \"Integrated REST APIs for reporting screens\")\n\n**Not supported by your CV. Add only if you truly have this experience:** code review practices, Next.js\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Integrated REST APIs for reporting screens (Frontend Developer)\n  **Suggested:** integrating REST APIs for reporting screens\n  Keywords: integrating\n",
+ "suggestions": [],
+ "markdown": "# CareerFit AI report: Frontend Developer\n\nYou meet 3 of 5 must-have requirements that can be checked from a CV. Of the rest, 2 may only need clearer wording.\n\n**Must-have requirements met: 3 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **React experience (4+ years)** (must-have) \u00b7 Partial evidence\n  - About 2.2\u20134.0 years found; 4+ required. Some dates are missing or only given as years, so this can't be confirmed.\n  - Your CV says: \"Frontend Developer, Brightside Studio (2021 to 2023); Freelance Web Developer, company (2022 to 2024)\"\n- \ud83d\udfe1 **code review practices** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Next.js** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **TypeScript** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Built dashboards in React and TypeScript\"\n- \ud83d\udfe2 **Integrating REST APIs** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Integrated REST APIs for reporting screens\"\n- \ud83d\udfe2 **Git** (must-have) \u00b7 Weak evidence (listed only)\n  - Your CV says: \"Git\"\n\n## Keyword analysis\n\n**Already in your CV:** React, TypeScript, REST, APIs, Git\n\n**Not supported by your CV. Add only if you truly have this experience:** code review, practices, Next.js\n",
  "warnings": []
 }

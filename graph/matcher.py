@@ -7,7 +7,7 @@ from graph.parsers import _wrap
 from llm.router import call_llm, KeyConfig
 from utils.cache import PARSE_CACHE, ParseCache
 
-MATCH_VERSION = "m4"      # bump when you change MATCH_SYSTEM
+MATCH_VERSION = "m5"      # bump when you change MATCH_SYSTEM
 BATCH_SIZE = 10
 SINGLE_CALL_MAX = 6
 
@@ -54,7 +54,8 @@ Rules:
 - strength: how well the CV proves the requirement. "strong" = a specific bullet or project shows it being done. "partial" = related or lower-level work is shown. "weak" = only named in a skills list or mentioned in passing. "none" = nothing in the CV about it.
 - cv_level: only for requirement lines that show level=... Give the level your CV shows for that skill. "basic" if the CV says basic, beginner, familiar, exposure, learning, or only assisted. "intermediate" for ordinary hands-on use. "advanced" if the CV says advanced or proficient, or shows owning complex work with it. "professional" if it says expert or shows leading or teaching it. Leave it empty if the CV gives no clue about the level.
 - Not mentioned is not the same as lacking the skill. When the CV says nothing, use "unclear" with strength "none".
-- Never use "meets" when cv_level is lower than the level the requirement asks for."""
+- Never use "meets" when the CV explicitly states a lower level than the requirement asks for (for example the CV says basic or beginner and the requirement says proficient).
+- A CV that does not state a level is NOT a shortfall. If the CV shows the work being done in a job bullet or project, or lists the skill, judge it as met and leave cv_level empty. Never answer "unclear" only because the level is not specified. Words like "solid", "strong" or "proficient" in a requirement are met by concrete hands-on work shown in the CV."""
 
 
 def _one_line(s) -> str:

@@ -1,7 +1,7 @@
 {
  "case_id": "c10_skill_level",
  "requests": 3,
- "elapsed": 5.1,
+ "elapsed": 6.1,
  "parsed_jd": {
   "job_title": "Graphic Designer",
   "requirements": [
@@ -19,7 +19,7 @@
    {
     "id": "R2",
     "text": "Proficiency in Adobe After Effects",
-    "type": "tool",
+    "type": "skill",
     "priority": "must_have",
     "min_years": null,
     "required_level": "advanced",
@@ -55,22 +55,22 @@
     "type": "tool",
     "priority": "nice_to_have",
     "min_years": null,
-    "required_level": "",
+    "required_level": "intermediate",
     "keywords": [
-     "Google Ads creatives"
+     "Google Ads"
     ]
    }
   ],
   "keywords": [
-   "Graphic Designer",
    "graphic design",
    "Adobe After Effects",
    "Figma",
    "social media graphics",
-   "Google Ads creatives",
-   "2+ years",
+   "Google Ads",
+   "creatives",
    "experience",
-   "required",
+   "proficiency",
+   "years",
    "plus"
   ]
  },
@@ -90,7 +90,7 @@
    "requirement_id": "R2",
    "verdict": "does_not_meet",
    "evidence_snippet": "Basic Adobe After Effects",
-   "reason": "only basic proficiency, not advanced",
+   "reason": "CV lists only basic proficiency, not advanced.",
    "verified": true,
    "strength": "partial",
    "fix": "trainable",
@@ -101,29 +101,29 @@
    "requirement_id": "R3",
    "verdict": "meets",
    "evidence_snippet": "Built landing page and app screen layouts in Figma, including shared component libraries",
-   "reason": "demonstrates intermediate Figma use",
+   "reason": "Demonstrates intermediate Figma experience.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
-   "cv_level": "intermediate",
+   "cv_level": "",
    "level_gap": false
   },
   {
    "requirement_id": "R4",
    "verdict": "meets",
    "evidence_snippet": "Designed social media graphics, banners and brand kits for 15 client accounts",
-   "reason": "shows intermediate social media graphics experience",
+   "reason": "Shows experience creating social media graphics.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
-   "cv_level": "intermediate",
+   "cv_level": "",
    "level_gap": false
   },
   {
    "requirement_id": "R5",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "no mention of Google Ads creatives",
+   "reason": "No mention of Google Ads creative experience.",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -139,7 +139,9 @@
   ],
   "missing_supported": [],
   "missing_unsupported": [
-   "Google Ads creatives"
+   "proficiency",
+   "Google Ads",
+   "creatives"
   ],
   "groups": [
    {
@@ -148,7 +150,9 @@
      "Adobe After Effects"
     ],
     "supported": [],
-    "unsupported": []
+    "unsupported": [
+     "proficiency"
+    ]
    },
    {
     "requirement": "Experience with Figma",
@@ -171,12 +175,13 @@
     "present": [],
     "supported": [],
     "unsupported": [
-     "Google Ads creatives"
+     "Google Ads",
+     "creatives"
     ]
    }
   ]
  },
  "suggestions": [],
- "markdown": "# CareerFit AI report: Graphic Designer\n\nYou meet 3 of 4 must-have requirements that can be checked from a CV. Of the rest, 1 need learning or a credential.\n\n**Must-have requirements met: 3 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Needs learning or a credential\n\nYou can build these. Do a small real project or a course, then show it under Projects or in a job bullet.\n\n- \ud83d\udd34 **Proficiency in Adobe After Effects** (must-have) \u00b7 Partial evidence \u00b7 CV level: basic, job asks: advanced\n  - only basic proficiency, not advanced\n  - Your CV says: \"Basic Adobe After Effects\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with Google Ads creatives** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **2+ years of graphic design experience** (must-have) \u00b7 Strong evidence\n  - About 3.3 years across the relevant roles (required: 2+).\n  - Your CV says: \"Graphic Designer, Studio Nine (2022-03 to 2025-06)\"\n- \ud83d\udfe2 **Experience with Figma** (must-have) \u00b7 Strong evidence \u00b7 CV level: intermediate, job asks: intermediate\n  - Your CV says: \"Built landing page and app screen layouts in Figma, including shared component libraries\"\n- \ud83d\udfe2 **Experience creating social media graphics** (must-have) \u00b7 Strong evidence \u00b7 CV level: intermediate, job asks: intermediate\n  - Your CV says: \"Designed social media graphics, banners and brand kits for 15 client accounts\"\n\n## Keyword analysis\n\n**Already in your CV:** Adobe After Effects, Figma, social media graphics\n\n**Not supported by your CV. Add only if you truly have this experience:** Google Ads creatives\n",
+ "markdown": "# CareerFit AI report: Graphic Designer\n\nYou meet 3 of 4 must-have requirements that can be checked from a CV. Of the rest, 1 need learning or a credential.\n\n**Must-have requirements met: 3 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Needs learning or a credential\n\nYou can build these. Do a small real project or a course, then show it under Projects or in a job bullet.\n\n- \ud83d\udd34 **Proficiency in Adobe After Effects** (must-have) \u00b7 Partial evidence \u00b7 CV level: basic, job asks: advanced\n  - CV lists only basic proficiency, not advanced.\n  - Your CV says: \"Basic Adobe After Effects\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with Google Ads creatives** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **2+ years of graphic design experience** (must-have) \u00b7 Strong evidence\n  - About 3.3 years across the relevant roles (required: 2+).\n  - Your CV says: \"Graphic Designer, Studio Nine (2022-03 to 2025-06)\"\n- \ud83d\udfe2 **Experience with Figma** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Built landing page and app screen layouts in Figma, including shared component libraries\"\n- \ud83d\udfe2 **Experience creating social media graphics** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Designed social media graphics, banners and brand kits for 15 client accounts\"\n\n## Keyword analysis\n\n**Already in your CV:** Adobe After Effects, Figma, social media graphics\n\n**Not supported by your CV. Add only if you truly have this experience:** proficiency, Google Ads, creatives\n",
  "warnings": []
 }

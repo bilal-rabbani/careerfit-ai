@@ -1,7 +1,7 @@
 {
  "case_id": "c9_wrong_industry",
  "requests": 3,
- "elapsed": 4.5,
+ "elapsed": 4.3,
  "parsed_jd": {
   "job_title": "Software Engineer",
   "requirements": [
@@ -28,8 +28,7 @@
     "required_level": "",
     "keywords": [
      "software development",
-     "professional",
-     "years"
+     "experience"
     ]
    },
    {
@@ -85,7 +84,7 @@
    "requirement_id": "R1",
    "verdict": "does_not_meet",
    "evidence_snippet": "Bachelor of Science, Civil Engineering, Northfield University, 2023",
-   "reason": "Degree is civil engineering, not CS/IT or related field",
+   "reason": "Degree is civil engineering, not CS/IT related",
    "verified": true,
    "strength": "none",
    "fix": "genuine_gap",
@@ -95,10 +94,10 @@
   {
    "requirement_id": "R2",
    "verdict": "does_not_meet",
-   "evidence_snippet": "Assistant Planning Engineer, Indus Builders (2023-01 to 2025-06)",
-   "reason": "Role is civil engineering, not software development and less than 4 years",
-   "verified": true,
-   "strength": "weak",
+   "evidence_snippet": "",
+   "reason": "No software development experience listed",
+   "verified": false,
+   "strength": "none",
    "fix": "genuine_gap",
    "cv_level": "",
    "level_gap": false
@@ -107,7 +106,7 @@
    "requirement_id": "R3",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "C++ proficiency not mentioned in CV",
+   "reason": "C++ not mentioned in CV",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -118,7 +117,7 @@
    "requirement_id": "R4",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "Rust proficiency not mentioned in CV",
+   "reason": "Rust not mentioned in CV",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -129,7 +128,7 @@
    "requirement_id": "R5",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "Distributed systems experience not mentioned in CV",
+   "reason": "No distributed systems experience mentioned",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -164,6 +163,6 @@
   ]
  },
  "suggestions": [],
- "markdown": "# CareerFit AI report: Software Engineer\n\nYou meet 0 of 4 must-have requirements that can be checked from a CV. Of the rest, 2 can't be fixed by rewording, 2 may only need clearer wording.\n\n**Must-have requirements met: 0 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udd34 **Bachelor's degree in CS, IT, or related field** (must-have) \u00b7 No evidence found\n  - Degree is civil engineering, not CS/IT or related field\n  - Your CV says: \"Bachelor of Science, Civil Engineering, Northfield University, 2023\"\n- \ud83d\udd34 **4+ years professional software development experience** (must-have) \u00b7 Weak evidence (listed only)\n  - Role is civil engineering, not software development and less than 4 years\n  - Your CV says: \"Assistant Planning Engineer, Indus Builders (2023-01 to 2025-06)\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Proficiency in C++** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Proficiency in Rust** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Experience with distributed systems** (nice-to-have) \u00b7 No evidence found\n  - Add it to: the dates and bullets of the relevant job\n\n## Keyword analysis\n\n**Already in your CV:** none\n\n**Not supported by your CV. Add only if you truly have this experience:** C++, Rust\n",
+ "markdown": "# CareerFit AI report: Software Engineer\n\nYou meet 0 of 4 must-have requirements that can be checked from a CV. Of the rest, 2 can't be fixed by rewording, 2 may only need clearer wording.\n\n**Must-have requirements met: 0 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udd34 **Bachelor's degree in CS, IT, or related field** (must-have) \u00b7 No evidence found\n  - Degree is civil engineering, not CS/IT related\n  - Your CV says: \"Bachelor of Science, Civil Engineering, Northfield University, 2023\"\n- \ud83d\udd34 **4+ years professional software development experience** (must-have) \u00b7 No evidence found\n  - No software development experience listed\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Proficiency in C++** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Proficiency in Rust** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Experience with distributed systems** (nice-to-have) \u00b7 No evidence found\n  - Add it to: the dates and bullets of the relevant job\n\n## Keyword analysis\n\n**Already in your CV:** none\n\n**Not supported by your CV. Add only if you truly have this experience:** C++, Rust\n",
  "warnings": []
 }

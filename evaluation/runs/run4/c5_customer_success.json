@@ -1,14 +1,14 @@
 {
  "case_id": "c5_customer_success",
  "requests": 4,
- "elapsed": 6.5,
+ "elapsed": 9.6,
  "parsed_jd": {
   "job_title": "Customer Success Manager",
   "requirements": [
    {
     "id": "R1",
     "text": "Excellent communication skills",
-    "type": "soft_skill",
+    "type": "skill",
     "priority": "must_have",
     "min_years": null,
     "required_level": "",
@@ -19,7 +19,7 @@
    {
     "id": "R2",
     "text": "Strong stakeholder management",
-    "type": "soft_skill",
+    "type": "skill",
     "priority": "must_have",
     "min_years": null,
     "required_level": "",
@@ -42,24 +42,23 @@
    },
    {
     "id": "R4",
-    "text": "2+ years in customer-facing SaaS role",
+    "text": "2+ years in a customer-facing SaaS role",
     "type": "experience",
     "priority": "must_have",
     "min_years": 2.0,
     "required_level": "",
     "keywords": [
      "customer-facing",
-     "SaaS",
-     "years"
+     "SaaS"
     ]
    },
    {
     "id": "R5",
-    "text": "Experience with CRM such as Salesforce or HubSpot",
+    "text": "Experience with a CRM such as Salesforce or HubSpot",
     "type": "tool",
     "priority": "must_have",
     "min_years": null,
-    "required_level": "",
+    "required_level": "intermediate",
     "keywords": [
      "CRM",
      "Salesforce",
@@ -69,13 +68,12 @@
    {
     "id": "R6",
     "text": "Spanish language skills",
-    "type": "soft_skill",
+    "type": "skill",
     "priority": "nice_to_have",
     "min_years": null,
     "required_level": "",
     "keywords": [
-     "Spanish",
-     "language"
+     "Spanish"
     ]
    }
   ],
@@ -95,34 +93,34 @@
  "results": [
   {
    "requirement_id": "R1",
-   "verdict": "cannot_assess",
-   "evidence_snippet": "",
-   "reason": "Soft skills can't be reliably judged from a CV.",
-   "verified": false,
-   "strength": "unavailable",
+   "verdict": "meets",
+   "evidence_snippet": "Ran quarterly business reviews with client stakeholders",
+   "reason": "CV shows communication via stakeholder reviews but does not explicitly state 'excellent' level.",
+   "verified": true,
+   "strength": "strong",
    "fix": "none",
    "cv_level": "",
    "level_gap": false
   },
   {
    "requirement_id": "R2",
-   "verdict": "cannot_assess",
-   "evidence_snippet": "",
-   "reason": "Soft skills can't be reliably judged from a CV.",
-   "verified": false,
-   "strength": "unavailable",
+   "verdict": "meets",
+   "evidence_snippet": "Ran quarterly business reviews with client stakeholders",
+   "reason": "Stakeholder management is listed in skills and demonstrated in work bullet.",
+   "verified": true,
+   "strength": "strong",
    "fix": "none",
    "cv_level": "",
    "level_gap": false
   },
   {
    "requirement_id": "R3",
-   "verdict": "unclear",
+   "verdict": "meets",
    "evidence_snippet": "BBA, Northfield University, 2021",
-   "reason": "The degree in the CV doesn't clearly match the field this requirement asks for. Check this one manually.",
+   "reason": "BBA degree qualifies as business bachelor's.",
    "verified": true,
-   "strength": "none",
-   "fix": "genuine_gap",
+   "strength": "strong",
+   "fix": "none",
    "cv_level": "",
    "level_gap": false
   },
@@ -141,7 +139,7 @@
    "requirement_id": "R5",
    "verdict": "meets",
    "evidence_snippet": "Tracked renewals and account health in HubSpot",
-   "reason": "Demonstrated use of HubSpot CRM",
+   "reason": "HubSpot CRM experience shown in skills and job bullet.",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -150,28 +148,39 @@
   },
   {
    "requirement_id": "R6",
-   "verdict": "cannot_assess",
+   "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "Soft skills can't be reliably judged from a CV.",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
    "verified": false,
-   "strength": "unavailable",
-   "fix": "none",
+   "strength": "none",
+   "fix": "cv_fixable",
    "cv_level": "",
    "level_gap": false
   }
  ],
  "keywords": {
   "present": [
+   "stakeholder management",
    "HubSpot"
   ],
   "missing_supported": [
    "CRM",
    "Salesforce"
   ],
-  "missing_unsupported": [],
+  "missing_unsupported": [
+   "Spanish"
+  ],
   "groups": [
    {
-    "requirement": "Experience with CRM such as Salesforce or HubSpot",
+    "requirement": "Strong stakeholder management",
+    "present": [
+     "stakeholder management"
+    ],
+    "supported": [],
+    "unsupported": []
+   },
+   {
+    "requirement": "Experience with a CRM such as Salesforce or HubSpot",
     "present": [
      "HubSpot"
     ],
@@ -180,19 +189,27 @@
      "Salesforce"
     ],
     "unsupported": []
+   },
+   {
+    "requirement": "Spanish language skills",
+    "present": [],
+    "supported": [],
+    "unsupported": [
+     "Spanish"
+    ]
    }
   ]
  },
  "suggestions": [
   {
    "original": "Tracked renewals and account health in HubSpot",
-   "suggested": "CRM",
+   "suggested": "CRM tracked renewals and account health in HubSpot",
    "keywords_used": [
     "CRM"
    ],
    "job": "Customer Success Associate"
   }
  ],
- "markdown": "# CareerFit AI report: Customer Success Manager\n\nYou meet 2 of 3 must-have requirements that can be checked from a CV. Of the rest, 1 can't be fixed by rewording. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 2 of 3**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udfe1 **Bachelor's degree in business or related field** (must-have) \u00b7 No evidence found\n  - The degree in the CV doesn't clearly match the field this requirement asks for. Check this one manually.\n  - Your CV says: \"BBA, Northfield University, 2021\"\n\n### Met\n\n- \ud83d\udfe2 **2+ years in customer-facing SaaS role** (must-have) \u00b7 Strong evidence\n  - About 2.5 years across the relevant roles (required: 2+).\n  - Your CV says: \"Customer Success Associate, CloudDesk (2021-09 to 2024-02)\"\n- \ud83d\udfe2 **Experience with CRM such as Salesforce or HubSpot** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Tracked renewals and account health in HubSpot\"\n\n### Can't be judged from a CV\n\nExcellent communication skills; Strong stakeholder management; Spanish language skills\n\n## Keyword analysis\n\n**Already in your CV:** HubSpot\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- CRM, Salesforce (for: Experience with CRM such as Salesforce or HubSpot) (your CV says: \"Tracked renewals and account health in HubSpot\")\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Tracked renewals and account health in HubSpot (Customer Success Associate)\n  **Suggested:** CRM\n  Keywords: CRM\n",
+ "markdown": "# CareerFit AI report: Customer Success Manager\n\nYou meet 5 of 5 must-have requirements that can be checked from a CV. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 5 of 5**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Spanish language skills** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Excellent communication skills** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Ran quarterly business reviews with client stakeholders\"\n- \ud83d\udfe2 **Strong stakeholder management** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Ran quarterly business reviews with client stakeholders\"\n- \ud83d\udfe2 **Bachelor's degree in business or related field** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BBA, Northfield University, 2021\"\n- \ud83d\udfe2 **2+ years in a customer-facing SaaS role** (must-have) \u00b7 Strong evidence\n  - About 2.5 years across the relevant roles (required: 2+).\n  - Your CV says: \"Customer Success Associate, CloudDesk (2021-09 to 2024-02)\"\n- \ud83d\udfe2 **Experience with a CRM such as Salesforce or HubSpot** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Tracked renewals and account health in HubSpot\"\n\n## Keyword analysis\n\n**Already in your CV:** stakeholder management, HubSpot\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- CRM, Salesforce (for: Experience with a CRM such as Salesforce or HubSpot) (your CV says: \"Tracked renewals and account health in HubSpot\")\n\n**Not supported by your CV. Add only if you truly have this experience:** Spanish\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Tracked renewals and account health in HubSpot (Customer Success Associate)\n  **Suggested:** CRM tracked renewals and account health in HubSpot\n  Keywords: CRM\n",
  "warnings": []
 }

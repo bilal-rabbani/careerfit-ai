@@ -1,7 +1,7 @@
 {
  "case_id": "c8_underqualified_ml",
- "requests": 3,
- "elapsed": 5.4,
+ "requests": 4,
+ "elapsed": 6.3,
  "parsed_jd": {
   "job_title": "Machine Learning Engineer",
   "requirements": [
@@ -43,10 +43,10 @@
    {
     "id": "R4",
     "text": "Experience deploying models to production",
-    "type": "experience",
+    "type": "skill",
     "priority": "must_have",
     "min_years": null,
-    "required_level": "",
+    "required_level": "intermediate",
     "keywords": [
      "deploying",
      "models",
@@ -56,10 +56,10 @@
    {
     "id": "R5",
     "text": "Experience with Apache Spark",
-    "type": "experience",
+    "type": "tool",
     "priority": "nice_to_have",
     "min_years": null,
-    "required_level": "",
+    "required_level": "intermediate",
     "keywords": [
      "Apache Spark"
     ]
@@ -75,7 +75,8 @@
    "deploying",
    "models",
    "production",
-   "Apache Spark"
+   "Apache Spark",
+   "experience"
   ]
  },
  "results": [
@@ -83,7 +84,7 @@
    "requirement_id": "R1",
    "verdict": "does_not_meet",
    "evidence_snippet": "BS Computer Science, Northfield University, 2021",
-   "reason": "Only a bachelor's degree listed",
+   "reason": "Only a bachelor's degree is listed",
    "verified": true,
    "strength": "none",
    "fix": "genuine_gap",
@@ -104,18 +105,18 @@
   {
    "requirement_id": "R3",
    "verdict": "meets",
-   "evidence_snippet": "Trained and fine-tuned image classification models in PyTorch",
+   "evidence_snippet": "- Trained and fine-tuned image classification models in PyTorch",
    "reason": "Demonstrates strong PyTorch usage",
    "verified": true,
    "strength": "strong",
    "fix": "none",
-   "cv_level": "advanced",
+   "cv_level": "",
    "level_gap": false
   },
   {
    "requirement_id": "R4",
    "verdict": "meets",
-   "evidence_snippet": "Deployed models as REST services on AWS Lambda",
+   "evidence_snippet": "- Deployed models as REST services on AWS Lambda",
    "reason": "Shows model deployment to production",
    "verified": true,
    "strength": "strong",
@@ -127,7 +128,7 @@
    "requirement_id": "R5",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "No Spark experience mentioned",
+   "reason": "No mention found in the CV, so it can't be confirmed either way.",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -137,10 +138,16 @@
  ],
  "keywords": {
   "present": [
-   "PyTorch"
+   "PyTorch",
+   "models"
   ],
-  "missing_supported": [],
-  "missing_unsupported": [],
+  "missing_supported": [
+   "deploying",
+   "production"
+  ],
+  "missing_unsupported": [
+   "Apache Spark"
+  ],
   "groups": [
    {
     "requirement": "Strong PyTorch skills",
@@ -149,10 +156,38 @@
     ],
     "supported": [],
     "unsupported": []
+   },
+   {
+    "requirement": "Experience deploying models to production",
+    "present": [
+     "models"
+    ],
+    "supported": [
+     "deploying",
+     "production"
+    ],
+    "unsupported": []
+   },
+   {
+    "requirement": "Experience with Apache Spark",
+    "present": [],
+    "supported": [],
+    "unsupported": [
+     "Apache Spark"
+    ]
    }
   ]
  },
- "suggestions": [],
- "markdown": "# CareerFit AI report: Machine Learning Engineer\n\nYou meet 2 of 4 must-have requirements that can be checked from a CV. Of the rest, 2 can't be fixed by rewording.\n\n**Must-have requirements met: 2 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udd34 **Master's or PhD in Computer Science or related field** (must-have) \u00b7 No evidence found\n  - Only a bachelor's degree listed\n  - Your CV says: \"BS Computer Science, Northfield University, 2021\"\n- \ud83d\udd34 **5+ years experience in machine learning** (must-have) \u00b7 Partial evidence\n  - CV shows about 2.0 years of relevant experience; 5+ required.\n  - Your CV says: \"Machine Learning Engineer, Datawise (2022-02 to 2024-01)\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with Apache Spark** (nice-to-have) \u00b7 No evidence found\n  - Add it to: the dates and bullets of the relevant job\n\n### Met\n\n- \ud83d\udfe2 **Strong PyTorch skills** (must-have) \u00b7 Strong evidence \u00b7 CV level: advanced, job asks: advanced\n  - Your CV says: \"Trained and fine-tuned image classification models in PyTorch\"\n- \ud83d\udfe2 **Experience deploying models to production** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Deployed models as REST services on AWS Lambda\"\n\n## Keyword analysis\n\n**Already in your CV:** PyTorch\n",
+ "suggestions": [
+  {
+   "original": "Deployed models as REST services on AWS Lambda",
+   "suggested": "Deploying models as REST services on AWS Lambda",
+   "keywords_used": [
+    "deploying"
+   ],
+   "job": "Machine Learning Engineer"
+  }
+ ],
+ "markdown": "# CareerFit AI report: Machine Learning Engineer\n\nYou meet 2 of 4 must-have requirements that can be checked from a CV. Of the rest, 2 can't be fixed by rewording. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 2 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Can't be fixed by rewording your CV\n\nRewording can't change these. Decide whether the employer is flexible (for example, accepts equivalent experience), and never claim what you don't have.\n\n- \ud83d\udd34 **Master's or PhD in Computer Science or related field** (must-have) \u00b7 No evidence found\n  - Only a bachelor's degree is listed\n  - Your CV says: \"BS Computer Science, Northfield University, 2021\"\n- \ud83d\udd34 **5+ years experience in machine learning** (must-have) \u00b7 Partial evidence\n  - CV shows about 2.0 years of relevant experience; 5+ required.\n  - Your CV says: \"Machine Learning Engineer, Datawise (2022-02 to 2024-01)\"\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Experience with Apache Spark** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Strong PyTorch skills** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"- Trained and fine-tuned image classification models in PyTorch\"\n- \ud83d\udfe2 **Experience deploying models to production** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"- Deployed models as REST services on AWS Lambda\"\n\n## Keyword analysis\n\n**Already in your CV:** PyTorch, models\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- deploying, production (for: Experience deploying models to production) (your CV says: \"- Deployed models as REST services on AWS Lambda\")\n\n**Not supported by your CV. Add only if you truly have this experience:** Apache Spark\n\n## Suggested CV wording\n\nThese are suggestions only. Check that every word is true before you use it.\n\n- **Original:** Deployed models as REST services on AWS Lambda (Machine Learning Engineer)\n  **Suggested:** Deploying models as REST services on AWS Lambda\n  Keywords: deploying\n",
  "warnings": []
 }

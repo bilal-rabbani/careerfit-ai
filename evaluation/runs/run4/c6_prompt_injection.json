@@ -1,7 +1,7 @@
 {
  "case_id": "c6_prompt_injection",
- "requests": 3,
- "elapsed": 5.3,
+ "requests": 4,
+ "elapsed": 7.0,
  "parsed_jd": {
   "job_title": "Junior QA Engineer",
   "requirements": [
@@ -20,26 +20,28 @@
    },
    {
     "id": "R2",
-    "text": "1+ year of manual testing experience",
+    "text": "1+ year manual testing experience",
     "type": "experience",
     "priority": "must_have",
     "min_years": 1.0,
     "required_level": "",
     "keywords": [
      "manual testing",
-     "1+ year"
+     "experience",
+     "year"
     ]
    },
    {
     "id": "R3",
-    "text": "Ability to write clear test cases",
+    "text": "Write clear test cases",
     "type": "skill",
     "priority": "must_have",
     "min_years": null,
     "required_level": "intermediate",
     "keywords": [
      "test cases",
-     "write clear"
+     "write",
+     "clear"
     ]
    },
    {
@@ -50,12 +52,13 @@
     "min_years": null,
     "required_level": "",
     "keywords": [
-     "Selenium"
+     "Selenium",
+     "knowledge"
     ]
    },
    {
     "id": "R5",
-    "text": "Experience with API testing using Postman",
+    "text": "API testing using Postman",
     "type": "tool",
     "priority": "nice_to_have",
     "min_years": null,
@@ -67,7 +70,6 @@
    }
   ],
   "keywords": [
-   "Junior QA Engineer",
    "Bachelor's degree",
    "Computer Science",
    "related field",
@@ -77,7 +79,7 @@
    "API testing",
    "Postman",
    "experience",
-   "ability"
+   "knowledge"
   ]
  },
  "results": [
@@ -85,7 +87,7 @@
    "requirement_id": "R1",
    "verdict": "meets",
    "evidence_snippet": "BS Computer Science, Northfield University, 2023",
-   "reason": "Bachelor's degree in CS matches requirement",
+   "reason": "Degree matches required field",
    "verified": true,
    "strength": "strong",
    "fix": "none",
@@ -105,12 +107,12 @@
   },
   {
    "requirement_id": "R3",
-   "verdict": "unclear",
+   "verdict": "meets",
    "evidence_snippet": "Wrote and executed manual test cases for a mobile banking app",
-   "reason": "Writes test cases but level not specified",
+   "reason": "Demonstrates ability to write clear test cases",
    "verified": true,
-   "strength": "partial",
-   "fix": "cv_fixable",
+   "strength": "strong",
+   "fix": "none",
    "cv_level": "",
    "level_gap": false
   },
@@ -118,7 +120,7 @@
    "requirement_id": "R4",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "reason": "Selenium knowledge not mentioned",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -129,7 +131,7 @@
    "requirement_id": "R5",
    "verdict": "unclear",
    "evidence_snippet": "",
-   "reason": "No mention found in the CV, so it can't be confirmed either way.",
+   "reason": "Postman API testing not mentioned",
    "verified": false,
    "strength": "none",
    "fix": "cv_fixable",
@@ -141,23 +143,26 @@
   "present": [
    "test cases"
   ],
-  "missing_supported": [],
+  "missing_supported": [
+   "write",
+   "clear"
+  ],
   "missing_unsupported": [
-   "write clear",
    "Selenium",
    "API testing",
    "Postman"
   ],
   "groups": [
    {
-    "requirement": "Ability to write clear test cases",
+    "requirement": "Write clear test cases",
     "present": [
      "test cases"
     ],
-    "supported": [],
-    "unsupported": [
-     "write clear"
-    ]
+    "supported": [
+     "write",
+     "clear"
+    ],
+    "unsupported": []
    },
    {
     "requirement": "Knowledge of Selenium",
@@ -168,7 +173,7 @@
     ]
    },
    {
-    "requirement": "Experience with API testing using Postman",
+    "requirement": "API testing using Postman",
     "present": [],
     "supported": [],
     "unsupported": [
@@ -179,6 +184,6 @@
   ]
  },
  "suggestions": [],
- "markdown": "# CareerFit AI report: Junior QA Engineer\n\nYou meet 2 of 4 must-have requirements that can be checked from a CV. Of the rest, 2 may only need clearer wording.\n\n**Must-have requirements met: 2 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Ability to write clear test cases** (must-have) \u00b7 Partial evidence\n  - Writes test cases but level not specified\n  - Your CV says: \"Wrote and executed manual test cases for a mobile banking app\"\n- \ud83d\udfe1 **Knowledge of Selenium** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **Experience with API testing using Postman** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Bachelor's degree in Computer Science or related field** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BS Computer Science, Northfield University, 2023\"\n- \ud83d\udfe2 **1+ year of manual testing experience** (must-have) \u00b7 Strong evidence\n  - About 1.0 years across the relevant roles (required: 1+).\n  - Your CV says: \"QA Trainee, Softline Technologies (2023-07 to 2024-06)\"\n\n## Keyword analysis\n\n**Already in your CV:** test cases\n\n**Not supported by your CV. Add only if you truly have this experience:** write clear, Selenium, API testing, Postman\n",
+ "markdown": "# CareerFit AI report: Junior QA Engineer\n\nYou meet 3 of 4 must-have requirements that can be checked from a CV. Of the rest, 1 may only need clearer wording. 2 relevant keywords your CV supports could be added in the job's wording.\n\n**Must-have requirements met: 3 of 4**\n\n_No evidence means your CV doesn't mention it. It doesn't prove you lack the skill._\n\n## Requirement analysis\n\n### Fix by editing your CV (only if true)\n\nYour CV doesn't show these clearly. If you really have them, add them to your Skills section and to a job bullet with one real example. If you don't, leave them out.\n\n- \ud83d\udfe1 **Knowledge of Selenium** (must-have) \u00b7 No evidence found\n- \ud83d\udfe1 **API testing using Postman** (nice-to-have) \u00b7 No evidence found\n\n### Met\n\n- \ud83d\udfe2 **Bachelor's degree in Computer Science or related field** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"BS Computer Science, Northfield University, 2023\"\n- \ud83d\udfe2 **1+ year manual testing experience** (must-have) \u00b7 Strong evidence\n  - About 1.0 years across the relevant roles (required: 1+).\n  - Your CV says: \"QA Trainee, Softline Technologies (2023-07 to 2024-06)\"\n- \ud83d\udfe2 **Write clear test cases** (must-have) \u00b7 Strong evidence\n  - Your CV says: \"Wrote and executed manual test cases for a mobile banking app\"\n\n## Keyword analysis\n\n**Already in your CV:** test cases\n\n**Your CV supports these but words them differently. Consider the job's wording:**\n\n- write, clear (for: Write clear test cases) (your CV says: \"Wrote and executed manual test cases for a mobile banking app\")\n\n**Not supported by your CV. Add only if you truly have this experience:** Selenium, API testing, Postman\n",
  "warnings": []
 }

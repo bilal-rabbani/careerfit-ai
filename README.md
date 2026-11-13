@@ -64,10 +64,10 @@ Evaluated on **hand-built synthetic cases** with hand-labelled expected verdicts
 | Requirements found by the JD parser | 100.0% | >= 90% | pass |
 | Priority correct (must vs nice) | 100.0% | >= 90% | pass |
 | Years requirement correct | 100.0% | >= 95% | pass |
-| Verdict acceptable (of found) | 90.9% | >= 85% | pass |
-| Verdict exactly the ideal one (of found) | 87.3% | info |  |
-| End to end acceptable (of all gold) | 90.9% | info |  |
-| Critical errors: false 'meets' | 0 | 0 | pass |
+| Verdict acceptable (of found) | 96.4% | >= 85% | pass |
+| Verdict exactly the ideal one (of found) | 89.1% | info |  |
+| End to end acceptable (of all gold) | 96.4% | info |  |
+| Critical errors: false 'meets' | 1 | 0 | FIX |
 | 'Meets' without verified evidence | 0 | 0 | pass |
 | Trap keywords wrongly suggested | 0 | 0 | pass |
 | Injected text echoed in the report | 0 | 0 | pass |
